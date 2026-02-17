@@ -24,7 +24,6 @@ const Index = () => {
       <StickyCTA onOpenForm={openForm} />
       <HeroSection onOpenForm={openForm} />
       <Testimonials />
-      <FeaturedIn />
       <WhyChooseUs />
       <HowItWorks />
       <PricingSection />
