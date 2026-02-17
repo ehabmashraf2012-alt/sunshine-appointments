@@ -1,7 +1,34 @@
 import { CreditCard, CalendarClock, KeyRound } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+const options = [
+  {
+    icon: CreditCard,
+    title: "Cash Payment",
+    description: (
+      <>A deposit followed by a completion payment. Perfect for those who want <strong className="text-foreground">complete control</strong> and the long-term benefits <strong className="text-foreground">from day one</strong>.</>
+    ),
+  },
+  {
+    icon: CalendarClock,
+    title: "Finance Plans",
+    description: (
+      <>Fixed monthly payments with <strong className="text-foreground">no hidden fees and double indemnity</strong>. Choose a term length that suits you.</>
+    ),
+  },
+  {
+    icon: KeyRound,
+    title: "Leasing",
+    description: (
+      <>Low initial outlay and immediate access to solar energy upon installation. <strong className="text-foreground">Save on bills from day one.</strong></>
+    ),
+  },
+];
 
 const PricingSection = () => {
+  const [selected, setSelected] = useState<number | null>(null);
+
   return (
     <section className="bg-background px-4 py-10 md:py-24">
       <div className="mx-auto max-w-5xl">
@@ -15,53 +42,35 @@ const PricingSection = () => {
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-2xl border border-border bg-background p-7 shadow-sm"
-          >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-solar-green-light">
-              <CreditCard className="h-6 w-6 text-primary" />
-            </div>
-            <h3 className="font-display text-lg font-bold text-foreground">Cash Payment</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              A deposit followed by a completion payment. Perfect for those who want <strong className="text-foreground">complete control</strong> and the long-term benefits <strong className="text-foreground">from day one</strong>.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="rounded-2xl border-2 border-primary bg-solar-green-light p-7 shadow-sm"
-          >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary">
-              <CalendarClock className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <h3 className="font-display text-lg font-bold text-foreground">Finance Plans</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Fixed monthly payments with <strong className="text-foreground">no hidden fees and double indemnity</strong>. Choose a term length that suits you.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="rounded-2xl border border-border bg-background p-7 shadow-sm"
-          >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-solar-green-light">
-              <KeyRound className="h-6 w-6 text-primary" />
-            </div>
-            <h3 className="font-display text-lg font-bold text-foreground">Leasing</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Low initial outlay and immediate access to solar energy upon installation. <strong className="text-foreground">Save on bills from day one.</strong>
-            </p>
-          </motion.div>
+          {options.map((opt, i) => {
+            const isSelected = selected === i;
+            const Icon = opt.icon;
+            return (
+              <motion.div
+                key={opt.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                onClick={() => setSelected(i)}
+                className={`cursor-pointer rounded-2xl p-7 shadow-sm transition-all duration-200 ${
+                  isSelected
+                    ? "border-2 border-primary bg-solar-green-light"
+                    : "border border-border bg-background hover:border-primary/40"
+                }`}
+              >
+                <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${
+                  isSelected ? "bg-primary" : "bg-solar-green-light"
+                }`}>
+                  <Icon className={`h-6 w-6 ${isSelected ? "text-primary-foreground" : "text-primary"}`} />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">{opt.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {opt.description}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
 
         <p className="mt-8 text-center text-base font-medium text-muted-foreground">
