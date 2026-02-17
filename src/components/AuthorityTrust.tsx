@@ -32,18 +32,18 @@ const AuthorityTrust = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-10 overflow-hidden rounded-2xl border border-border bg-background shadow-sm"
+          className="mt-10 overflow-x-auto rounded-2xl border border-border bg-background shadow-sm"
         >
-          <table className="w-full text-sm">
+          <table className="w-full min-w-[400px] text-sm">
             <thead>
               <tr className="border-b border-border bg-muted">
-                <th className="px-4 py-3 text-left font-display font-semibold text-foreground md:px-6">
+                <th className="px-3 py-3 text-left font-display text-xs font-semibold text-foreground md:px-6 md:text-sm">
                   Feature
                 </th>
-                <th className="px-4 py-3 text-center font-display font-semibold text-primary md:px-6">
+                <th className="px-3 py-3 text-center font-display text-xs font-semibold text-primary md:px-6 md:text-sm">
                   Our Partners
                 </th>
-                <th className="px-4 py-3 text-center font-display font-semibold text-muted-foreground md:px-6">
+                <th className="px-3 py-3 text-center font-display text-xs font-semibold text-muted-foreground md:px-6 md:text-sm">
                   Competitors
                 </th>
               </tr>
@@ -51,15 +51,15 @@ const AuthorityTrust = () => {
             <tbody>
               {comparisons.map((row, i) => (
                 <tr key={row.feature} className={i % 2 === 0 ? "" : "bg-muted/50"}>
-                  <td className="px-4 py-3 font-medium text-foreground md:px-6">{row.feature}</td>
-                  <td className="px-4 py-3 text-center md:px-6">
+                  <td className="px-3 py-2.5 text-xs font-medium text-foreground md:px-6 md:py-3 md:text-sm">{row.feature}</td>
+                  <td className="px-3 py-2.5 text-center text-xs md:px-6 md:py-3 md:text-sm">
                     {row.us === true ? (
                       <Check className="mx-auto h-5 w-5 text-primary" />
                     ) : (
                       <span className="font-semibold text-primary">{String(row.us)}</span>
                     )}
                   </td>
-                  <td className="px-4 py-3 text-center md:px-6">
+                  <td className="px-3 py-2.5 text-center text-xs md:px-6 md:py-3 md:text-sm">
                     {row.them === true ? (
                       <Check className="mx-auto h-5 w-5 text-muted-foreground" />
                     ) : row.them === false ? (
