@@ -8,9 +8,9 @@ interface HeaderProps {
 
 const Header = ({ onOpenForm }: HeaderProps) => {
   return (
-    <header className="absolute left-0 right-0 top-0 z-40 px-4 py-4">
+    <header className="absolute left-0 right-0 top-0 z-40 px-4 py-3">
       <div className="mx-auto flex max-w-6xl items-center justify-center md:justify-between">
-        <img src={logo} alt="Solar Battery Scheme" className="h-10 md:h-12" />
+        <img src={logo} alt="Solar Battery Scheme" className="h-16 md:h-12" />
         
         {/* Desktop: phone CTA */}
         <div className="hidden items-center gap-3 md:flex">
