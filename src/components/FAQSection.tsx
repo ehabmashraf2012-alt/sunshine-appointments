@@ -7,28 +7,28 @@ import {
 
 const faqs = [
   {
-    q: "How much does a solar panel system cost?",
-    a: "A typical residential system costs between £5,000 and £12,000 depending on size and battery options. With our 0% finance, you can spread the cost over time — and in many cases your monthly savings exceed the repayment. Your free home survey will provide an exact, personalised quote.",
+    q: "How do I get started?",
+    a: "Complete our free quote form and a solar expert will be in touch to give you an initial insight into how much you could save on your annual electricity bills and the potential cost of solar and battery storage installation.",
   },
   {
-    q: "How long does installation take?",
-    a: "Most installations are completed in a single day. Larger or more complex systems may take up to two days. Our MCS-accredited teams handle everything from scaffolding to commissioning.",
+    q: "Will my solar panels work on cloudy days?",
+    a: "Yes — absolutely. Your panels are chosen for their high performance in the UK climate. Even on overcast days, they generate substantial electricity thanks to modern photovoltaic technology that captures diffused sunlight, not just direct rays.",
   },
   {
-    q: "Am I eligible for solar panels?",
-    a: "Most UK homeowners with a suitable roof (south, east or west facing) are eligible. You'll need to own your property or have landlord permission. Our quick eligibility check takes under 2 minutes and will confirm if your home qualifies.",
+    q: "How does solar work?",
+    a: "Solar panels capture sunlight and convert it into electricity, which an inverter transforms into usable power for your home. During the day, you can use free solar energy or store excess in a battery for future use. This helps lower bills, increase energy independence, and reduce your carbon footprint — all from the sun!",
   },
   {
-    q: "What happens during the home survey?",
-    a: "A solar expert visits your home to assess your roof, shading, and energy usage. They'll design a bespoke system and provide a no-obligation quote. The survey is completely free and typically takes 45–60 minutes.",
+    q: "What's driving UK energy costs up?",
+    a: "A combination of global gas supply issues, rising grid demand from EVs and heat pumps straining infrastructure, and inflation affecting fuel transportation, power plant maintenance and wages. These costs are passed down to consumers, leading to increased household bills — making solar an increasingly smart investment.",
+  },
+  {
+    q: "What happens if I don't take action?",
+    a: "A homeowner who doesn't switch to energy-efficient solutions such as solar and battery storage could waste tens of thousands on unnecessary energy costs over the coming years as prices continue to rise.",
   },
   {
     q: "What is the Year One Performance Guarantee?",
     a: "We guarantee your system will generate at least the amount of energy we quote in its first year. If it falls short, we'll refund the difference. It's our way of ensuring you get the savings you were promised.",
-  },
-  {
-    q: "Do I need planning permission?",
-    a: "In most cases, solar panels fall under permitted development and don't require planning permission. There are some exceptions for listed buildings and conservation areas — your surveyor will advise on this during your free home survey.",
   },
 ];
 
@@ -41,7 +41,7 @@ const FAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Everything you need to know about going solar
+            Keen to learn more? Check out the most common questions our team receives:
           </p>
         </div>
 

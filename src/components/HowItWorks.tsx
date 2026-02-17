@@ -1,25 +1,31 @@
-import { ClipboardCheck, Home, Wrench } from "lucide-react";
+import { Sun, Battery, Zap, PartyPopper } from "lucide-react";
 import { motion } from "framer-motion";
 import installerBattery from "@/assets/installer-battery.webp";
 
 const steps = [
   {
-    icon: ClipboardCheck,
+    icon: Sun,
     step: "1",
-    title: "Check Eligibility",
-    description: "Answer a few quick questions to see if your home qualifies for solar savings.",
+    title: "Expert Installation",
+    description: "Your high-performance system includes a bespoke design tailored to maximise your roof space and capture as much sunlight as possible.",
   },
   {
-    icon: Home,
+    icon: Battery,
     step: "2",
-    title: "Free Home Survey",
-    description: "A solar expert visits your home to design your perfect system — completely free.",
+    title: "Store Your Energy",
+    description: "A smart battery storage system captures excess energy and powers your home at night or during peak times when electricity costs more.",
   },
   {
-    icon: Wrench,
+    icon: Zap,
     step: "3",
-    title: "Quick Installation",
-    description: "Professional installation in as little as 3 weeks. Our accredited team handles everything.",
+    title: "Power Your Home",
+    description: "Use your own electricity any time of day or night. Say goodbye to paying extortionate costs to your current energy supplier.",
+  },
+  {
+    icon: PartyPopper,
+    step: "4",
+    title: "Enjoy Energy Freedom",
+    description: "You've taken control of your energy future. Your panels are backed by a lifetime warranty and an expert team on hand if you need support.",
   },
 ];
 
@@ -29,33 +35,33 @@ const HowItWorks = () => {
       <div className="mx-auto max-w-5xl">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-            How It Works
+            Cut Your Bills From Day One
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Three simple steps to start saving on your energy bills
+            The solution to lower bills is easier than you think. Your solar and battery storage system will help you store energy you generate and take control of your power supply.
           </p>
         </div>
 
         <div className="mt-12 grid items-center gap-10 md:grid-cols-2">
           {/* Steps */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {steps.map((s, i) => (
               <motion.div
                 key={s.title}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="flex gap-4"
               >
-                <div className="relative flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-solar-green-light">
-                  <s.icon className="h-6 w-6 text-primary" />
+                <div className="relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-solar-green-light">
+                  <s.icon className="h-5 w-5 text-primary" />
                   <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
                     {s.step}
                   </span>
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-foreground">{s.title}</h3>
+                  <h3 className="font-display text-base font-bold text-foreground">{s.title}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                     {s.description}
                   </p>
