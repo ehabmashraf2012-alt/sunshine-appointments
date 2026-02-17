@@ -49,20 +49,6 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 flex flex-col items-center gap-6"
         >
-          {/* Eligibility criteria */}
-          <div className="flex flex-col gap-3 text-left sm:flex-row sm:gap-6">
-            {[
-              "Homeowner",
-              "Staying 3+ Years",
-              "£150+ Monthly Bill",
-            ].map((prop) => (
-              <div key={prop} className="flex items-center gap-2 text-sm font-medium text-foreground md:text-base">
-                <CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" />
-                {prop}
-              </div>
-            ))}
-          </div>
-
           <Button
             onClick={onOpenForm}
             size="lg"
@@ -74,6 +60,35 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           <p className="text-sm text-muted-foreground">
             No obligation · Takes 2 minutes · Completely free
           </p>
+
+          {/* Eligibility criteria */}
+          <div className="mt-2 flex flex-col items-center gap-2">
+            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">You may be eligible if you are:</p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
+              {[
+                "Homeowner",
+                "Staying 3+ Years",
+                "£150+ Monthly Bill",
+              ].map((prop) => (
+                <div key={prop} className="flex items-center gap-2 text-sm font-medium text-foreground md:text-base">
+                  <CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" />
+                  {prop}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Join social proof */}
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex -space-x-2">
+              {[0, 1, 2].map((i) => (
+                <div key={i} className="h-7 w-7 rounded-full border-2 border-background bg-primary/20 flex items-center justify-center text-[10px] font-bold text-primary">
+                  {["JB", "SD", "MR"][i]}
+                </div>
+              ))}
+            </div>
+            <span>Join <strong className="text-foreground">150+ people</strong> this week</span>
+          </div>
         </motion.div>
 
         {/* Social proof strip */}
