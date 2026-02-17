@@ -11,7 +11,7 @@ interface EligibilityFormProps {
   onClose: () => void;
 }
 
-const TOTAL_STEPS = 7; // 6 steps + confirmation
+const TOTAL_STEPS = 7;
 
 const propertyTypes = [
   { label: "Detached", icon: Home },
@@ -51,14 +51,8 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
 
   const progress = step === TOTAL_STEPS ? 100 : ((step - 1) / (TOTAL_STEPS - 1)) * 100;
 
-  const goNext = () => {
-    setDirection(1);
-    setStep((s) => s + 1);
-  };
-  const goBack = () => {
-    setDirection(-1);
-    setStep((s) => s - 1);
-  };
+  const goNext = () => { setDirection(1); setStep((s) => s + 1); };
+  const goBack = () => { setDirection(-1); setStep((s) => s - 1); };
 
   const handleClose = () => {
     onClose();
@@ -71,12 +65,8 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
 
   const validateStep6 = () => {
     const newErrors: Record<string, string> = {};
-    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      newErrors.email = "Please enter a valid email";
-    }
-    if (!data.phone || !/^[\d\s+()-]{10,15}$/.test(data.phone.replace(/\s/g, ""))) {
-      newErrors.phone = "Please enter a valid UK phone number";
-    }
+    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) newErrors.email = "Please enter a valid email";
+    if (!data.phone || !/^[\d\s+()-]{10,15}$/.test(data.phone.replace(/\s/g, ""))) newErrors.phone = "Please enter a valid UK phone number";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -120,7 +110,7 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
           <div className="mt-2 flex justify-between text-xs text-muted-foreground">
             <span>Your Home</span>
             <span>Your Details</span>
-            <span>Result</span>
+            <span>Eligibility Check</span>
           </div>
         </div>
 
@@ -136,7 +126,6 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
               exit="exit"
               transition={{ duration: 0.25 }}
             >
-              {/* Step 1: Property Type */}
               {step === 1 && (
                 <div>
                   <h4 className="font-display text-xl font-bold text-foreground">What type of property do you live in?</h4>
@@ -157,47 +146,28 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
                 </div>
               )}
 
-              {/* Step 2: Homeowner */}
               {step === 2 && (
                 <div>
                   <h4 className="font-display text-xl font-bold text-foreground">Are you the homeowner?</h4>
                   <p className="mt-2 text-sm text-muted-foreground">We need to confirm you can authorise a solar installation.</p>
                   <div className="mt-6 flex gap-4">
-                    <Button
-                      onClick={() => { setData({ ...data, homeowner: "yes" }); goNext(); }}
-                      variant={data.homeowner === "yes" ? "default" : "outline"}
-                      className="h-14 flex-1 rounded-xl text-lg font-semibold"
-                    >
-                      Yes
-                    </Button>
-                    <Button
-                      onClick={() => { setData({ ...data, homeowner: "no" }); goNext(); }}
-                      variant={data.homeowner === "no" ? "default" : "outline"}
-                      className="h-14 flex-1 rounded-xl text-lg font-semibold"
-                    >
-                      No
-                    </Button>
+                    <Button onClick={() => { setData({ ...data, homeowner: "yes" }); goNext(); }} variant={data.homeowner === "yes" ? "default" : "outline"} className="h-14 flex-1 rounded-xl text-lg font-semibold">Yes</Button>
+                    <Button onClick={() => { setData({ ...data, homeowner: "no" }); goNext(); }} variant={data.homeowner === "no" ? "default" : "outline"} className="h-14 flex-1 rounded-xl text-lg font-semibold">No</Button>
                   </div>
                 </div>
               )}
 
-              {/* Step 2b: Not homeowner exit */}
               {step === 3 && data.homeowner === "no" && (
                 <div className="text-center">
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-solar-warm">
                     <Home className="h-8 w-8 text-muted-foreground" />
                   </div>
                   <h4 className="font-display text-xl font-bold text-foreground">Unfortunately, you need to be a homeowner</h4>
-                  <p className="mt-3 text-sm text-muted-foreground">
-                    Solar installations require homeowner approval. If you rent, please speak to your landlord about solar options.
-                  </p>
-                  <Button onClick={handleClose} variant="outline" className="mt-6 rounded-xl">
-                    Close
-                  </Button>
+                  <p className="mt-3 text-sm text-muted-foreground">Solar installations require homeowner approval. If you rent, please speak to your landlord about solar options.</p>
+                  <Button onClick={handleClose} variant="outline" className="mt-6 rounded-xl">Close</Button>
                 </div>
               )}
 
-              {/* Step 3: Monthly Bill */}
               {step === 3 && data.homeowner !== "no" && (
                 <div>
                   <h4 className="font-display text-xl font-bold text-foreground">What's your monthly electricity bill?</h4>
@@ -218,67 +188,34 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
                 </div>
               )}
 
-              {/* Step 4: Postcode */}
               {step === 4 && (
                 <div>
                   <h4 className="font-display text-xl font-bold text-foreground">What's your postcode?</h4>
                   <p className="mt-2 text-sm text-muted-foreground">So we can check coverage in your area.</p>
                   <div className="mt-6">
-                    <Input
-                      placeholder="e.g. SW1A 1AA"
-                      value={data.postcode}
-                      onChange={(e) => setData({ ...data, postcode: e.target.value.toUpperCase() })}
-                      className="h-14 rounded-xl text-center text-lg font-medium uppercase"
-                      maxLength={10}
-                    />
-                    <Button
-                      onClick={goNext}
-                      disabled={data.postcode.length < 5}
-                      className="mt-4 h-12 w-full rounded-xl text-base font-semibold"
-                    >
-                      Continue
-                    </Button>
+                    <Input placeholder="e.g. SW1A 1AA" value={data.postcode} onChange={(e) => setData({ ...data, postcode: e.target.value.toUpperCase() })} className="h-14 rounded-xl text-center text-lg font-medium uppercase" maxLength={10} />
+                    <Button onClick={goNext} disabled={data.postcode.length < 5} className="mt-4 h-12 w-full rounded-xl text-base font-semibold">Continue</Button>
                   </div>
                 </div>
               )}
 
-              {/* Step 5: Name */}
               {step === 5 && (
                 <div>
                   <h4 className="font-display text-xl font-bold text-foreground">What's your name?</h4>
                   <div className="mt-6 space-y-4">
                     <div>
                       <Label htmlFor="firstName">First name</Label>
-                      <Input
-                        id="firstName"
-                        value={data.firstName}
-                        onChange={(e) => setData({ ...data, firstName: e.target.value })}
-                        className="mt-1 h-12 rounded-xl"
-                        placeholder="John"
-                      />
+                      <Input id="firstName" value={data.firstName} onChange={(e) => setData({ ...data, firstName: e.target.value })} className="mt-1 h-12 rounded-xl" placeholder="John" />
                     </div>
                     <div>
                       <Label htmlFor="lastName">Last name</Label>
-                      <Input
-                        id="lastName"
-                        value={data.lastName}
-                        onChange={(e) => setData({ ...data, lastName: e.target.value })}
-                        className="mt-1 h-12 rounded-xl"
-                        placeholder="Smith"
-                      />
+                      <Input id="lastName" value={data.lastName} onChange={(e) => setData({ ...data, lastName: e.target.value })} className="mt-1 h-12 rounded-xl" placeholder="Smith" />
                     </div>
-                    <Button
-                      onClick={goNext}
-                      disabled={!data.firstName || !data.lastName}
-                      className="h-12 w-full rounded-xl text-base font-semibold"
-                    >
-                      Continue
-                    </Button>
+                    <Button onClick={goNext} disabled={!data.firstName || !data.lastName} className="h-12 w-full rounded-xl text-base font-semibold">Continue</Button>
                   </div>
                 </div>
               )}
 
-              {/* Step 6: Contact */}
               {step === 6 && (
                 <div>
                   <h4 className="font-display text-xl font-bold text-foreground">How can we reach you?</h4>
@@ -286,70 +223,35 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
                   <div className="mt-6 space-y-4">
                     <div>
                       <Label htmlFor="email">Email address</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={data.email}
-                        onChange={(e) => { setData({ ...data, email: e.target.value }); setErrors({ ...errors, email: "" }); }}
-                        className={`mt-1 h-12 rounded-xl ${errors.email ? "border-destructive" : ""}`}
-                        placeholder="john@example.com"
-                      />
+                      <Input id="email" type="email" value={data.email} onChange={(e) => { setData({ ...data, email: e.target.value }); setErrors({ ...errors, email: "" }); }} className={`mt-1 h-12 rounded-xl ${errors.email ? "border-destructive" : ""}`} placeholder="john@example.com" />
                       {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
                     </div>
                     <div>
                       <Label htmlFor="phone">Mobile number</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={data.phone}
-                        onChange={(e) => { setData({ ...data, phone: e.target.value }); setErrors({ ...errors, phone: "" }); }}
-                        className={`mt-1 h-12 rounded-xl ${errors.phone ? "border-destructive" : ""}`}
-                        placeholder="07700 900000"
-                      />
+                      <Input id="phone" type="tel" value={data.phone} onChange={(e) => { setData({ ...data, phone: e.target.value }); setErrors({ ...errors, phone: "" }); }} className={`mt-1 h-12 rounded-xl ${errors.phone ? "border-destructive" : ""}`} placeholder="07700 900000" />
                       {errors.phone && <p className="mt-1 text-xs text-destructive">{errors.phone}</p>}
                     </div>
-                    <Button
-                      onClick={() => { if (validateStep6()) goNext(); }}
-                      className="h-12 w-full rounded-xl text-base font-semibold"
-                    >
-                      Check My Eligibility
-                    </Button>
+                    <Button onClick={() => { if (validateStep6()) goNext(); }} className="h-12 w-full rounded-xl text-base font-semibold">Check My Eligibility</Button>
                   </div>
                 </div>
               )}
 
-              {/* Step 7: Confirmation */}
               {step === TOTAL_STEPS && (
                 <div className="text-center">
                   <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-solar-green-light">
                     <Check className="h-10 w-10 text-primary" />
                   </div>
-                  <h4 className="font-display text-2xl font-bold text-foreground">
-                    Great News, {data.firstName}!
-                  </h4>
-                  <p className="mt-3 text-muted-foreground">
-                    Based on your answers, your home appears to be eligible for solar and battery storage.
-                  </p>
+                  <h4 className="font-display text-2xl font-bold text-foreground">Great News, {data.firstName}!</h4>
+                  <p className="mt-3 text-muted-foreground">Based on your answers, your home appears to be eligible for solar and battery storage.</p>
                   <div className="mt-6 rounded-xl border border-border bg-solar-green-light p-4 text-left">
                     <h5 className="font-display text-sm font-bold text-foreground">What happens next?</h5>
                     <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                        A solar expert will call you within 24 hours
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                        We'll arrange a free, no-obligation home survey
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                        You'll receive a personalised quote and savings estimate
-                      </li>
+                      <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />A solar expert will call you within 24 hours</li>
+                      <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />We'll arrange a free, no-obligation home survey</li>
+                      <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />You'll receive a personalised quote and savings estimate</li>
                     </ul>
                   </div>
-                  <Button onClick={handleClose} className="mt-6 h-12 w-full rounded-xl text-base font-semibold">
-                    Done
-                  </Button>
+                  <Button onClick={handleClose} className="mt-6 h-12 w-full rounded-xl text-base font-semibold">Done</Button>
                 </div>
               )}
             </motion.div>
@@ -362,10 +264,10 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
             <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-3 w-3 fill-solar-gold text-solar-gold" />
+                  <Star key={i} className={`h-3 w-3 ${i <= 4 ? "fill-solar-gold text-solar-gold" : "fill-solar-gold/50 text-solar-gold/50"}`} />
                 ))}
               </div>
-              <span>Rated 4.8/5 by 6,000+ customers</span>
+              <span>Rated 4.6/5 by 5,700+ customers</span>
             </div>
           </div>
         )}

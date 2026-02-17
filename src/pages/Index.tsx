@@ -3,8 +3,10 @@ import HeroSection from "@/components/HeroSection";
 import StickyCTA from "@/components/StickyCTA";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HowItWorks from "@/components/HowItWorks";
+import PricingSection from "@/components/PricingSection";
 import Testimonials from "@/components/Testimonials";
 import EligibilitySavings from "@/components/EligibilitySavings";
+import VATBanner from "@/components/VATBanner";
 import AuthorityTrust from "@/components/AuthorityTrust";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -20,6 +22,8 @@ const Index = () => {
       <HeroSection onOpenForm={openForm} />
       <WhyChooseUs />
       <HowItWorks />
+      <PricingSection />
+      <VATBanner onOpenForm={openForm} />
       <Testimonials />
       <EligibilitySavings onOpenForm={openForm} />
       <AuthorityTrust />

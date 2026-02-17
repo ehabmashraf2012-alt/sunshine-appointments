@@ -2,17 +2,17 @@ import { Check, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const comparisons = [
-  { feature: "Year One Performance Guarantee", us: true, them: false },
-  { feature: "MCS Accredited", us: true, them: "Some" },
-  { feature: "RECC Member", us: true, them: false },
-  { feature: "In-House Installation Teams", us: true, them: false },
-  { feature: "Trustpilot Rating 4.5+", us: true, them: false },
+  { feature: "Panel Warranty", us: "Lifetime", them: "5/10/12 Years" },
+  { feature: "Inverter Warranty", us: "25 Years", them: "5/10 Years" },
+  { feature: "Workmanship Warranty", us: "10 Years", them: "5/10 Years" },
+  { feature: "System Return", us: "High", them: "Low" },
+  { feature: "HIES Member", us: true, them: false },
+  { feature: "FCA Approved", us: true, them: false },
   { feature: "0% Finance Options", us: true, them: "Some" },
   { feature: "Free Home Survey", us: true, them: true },
-  { feature: "Aftercare & Monitoring", us: true, them: false },
 ];
 
-const mediaLogos = ["BBC", "The Guardian", "ITV", "Daily Mail", "The Telegraph"];
+const accreditations = ["HIES Member", "FCA Approved", "Trustpilot Excellent", "25 Year Warranty"];
 
 const AuthorityTrust = () => {
   return (
@@ -20,10 +20,10 @@ const AuthorityTrust = () => {
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-            The Project Solar Difference
+            Solar Panels Built to Last
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            See how we compare to typical UK solar installers
+            See how our partners compare to typical UK solar installers
           </p>
         </div>
 
@@ -41,22 +41,22 @@ const AuthorityTrust = () => {
                   Feature
                 </th>
                 <th className="px-4 py-3 text-center font-display font-semibold text-primary md:px-6">
-                  Project Solar
+                  Our Partners
                 </th>
                 <th className="px-4 py-3 text-center font-display font-semibold text-muted-foreground md:px-6">
-                  Others
+                  Competitors
                 </th>
               </tr>
             </thead>
             <tbody>
               {comparisons.map((row, i) => (
                 <tr key={row.feature} className={i % 2 === 0 ? "" : "bg-muted/50"}>
-                  <td className="px-4 py-3 text-foreground md:px-6">{row.feature}</td>
+                  <td className="px-4 py-3 font-medium text-foreground md:px-6">{row.feature}</td>
                   <td className="px-4 py-3 text-center md:px-6">
                     {row.us === true ? (
                       <Check className="mx-auto h-5 w-5 text-primary" />
                     ) : (
-                      <span className="text-muted-foreground">{String(row.us)}</span>
+                      <span className="font-semibold text-primary">{String(row.us)}</span>
                     )}
                   </td>
                   <td className="px-4 py-3 text-center md:px-6">
@@ -74,18 +74,15 @@ const AuthorityTrust = () => {
           </table>
         </motion.div>
 
-        {/* Media / accreditation logos */}
+        {/* Accreditation badges */}
         <div className="mt-12 text-center">
-          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            As featured in
-          </p>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-6 md:gap-10">
-            {mediaLogos.map((logo) => (
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            {accreditations.map((badge) => (
               <span
-                key={logo}
-                className="font-display text-lg font-bold text-muted-foreground/40 md:text-xl"
+                key={badge}
+                className="rounded-full border border-border bg-background px-5 py-2 text-sm font-semibold text-foreground shadow-sm"
               >
-                {logo}
+                {badge}
               </span>
             ))}
           </div>

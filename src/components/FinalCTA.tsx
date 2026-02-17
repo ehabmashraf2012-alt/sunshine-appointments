@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Clock, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import heroBanner from "@/assets/hero-banner.webp";
 
 interface FinalCTAProps {
   onOpenForm: () => void;
@@ -8,10 +9,11 @@ interface FinalCTAProps {
 
 const FinalCTA = ({ onOpenForm }: FinalCTAProps) => {
   return (
-    <section className="relative overflow-hidden bg-primary px-4 py-20 md:py-28">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-20 -top-20 h-[300px] w-[300px] rounded-full bg-primary-foreground/5 blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 h-[400px] w-[400px] rounded-full bg-primary-foreground/5 blur-3xl" />
+    <section className="relative overflow-hidden px-4 py-20 md:py-28">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={heroBanner} alt="" className="h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-primary/90" />
       </div>
 
       <motion.div
@@ -25,8 +27,8 @@ const FinalCTA = ({ onOpenForm }: FinalCTAProps) => {
           Ready to Start Saving?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/80">
-          Check if your home qualifies for premium solar and battery storage
-          from the UK's #1 rated installer.
+          Join 5,700+ families already saving up to 70% on their energy bills.
+          Check your eligibility now.
         </p>
 
         <Button
