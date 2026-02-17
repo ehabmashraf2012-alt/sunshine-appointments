@@ -18,7 +18,7 @@ const Index = () => {
   const openForm = () => setFormOpen(true);
 
   return (
-    <>
+    <div className="pb-16 md:pb-0">
       <Header onOpenForm={openForm} />
       <StickyCTA onOpenForm={openForm} />
       <HeroSection onOpenForm={openForm} />
@@ -32,7 +32,7 @@ const Index = () => {
       <FAQSection />
       <FinalCTA onOpenForm={openForm} />
       <EligibilityForm open={formOpen} onClose={() => setFormOpen(false)} />
-    </>
+    </div>
   );
 };
 
