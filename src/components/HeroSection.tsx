@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
   return (
-    <section className="relative overflow-hidden bg-background px-4 pb-20 pt-28 md:pt-36 md:pb-28">
+    <section className="relative overflow-hidden bg-background px-4 pb-20 pt-24 md:pt-36 md:pb-28">
       {/* Background image with overlay */}
       <div className="pointer-events-none absolute inset-0">
         <img
