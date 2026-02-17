@@ -1,7 +1,7 @@
 import { CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import heroBanner from "@/assets/hero-banner.webp";
+import heroBanner from "@/assets/hp-banner-2.webp";
 
 interface HeroSectionProps {
   onOpenForm: () => void;
