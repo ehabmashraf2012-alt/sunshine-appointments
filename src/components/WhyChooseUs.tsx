@@ -32,20 +32,20 @@ const WhyChooseUs = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="bg-solar-green-light px-4 py-10 md:py-20">
+    <section className="bg-primary px-4 py-10 md:py-20">
       <div className="mx-auto max-w-5xl">
         <Collapsible open={open} onOpenChange={setOpen}>
           <CollapsibleTrigger asChild>
             <button className="group mx-auto flex w-full max-w-lg items-center justify-center gap-3 text-center">
-              <h2 className="font-display text-2xl font-bold text-foreground md:text-3xl">
+              <h2 className="font-display text-2xl font-bold text-primary-foreground md:text-3xl">
                 Don't Settle for Less
               </h2>
               <ChevronDown
-                className={`h-6 w-6 text-primary transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+                className={`h-6 w-6 text-primary-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
               />
             </button>
           </CollapsibleTrigger>
-          <p className="mx-auto mt-2 max-w-lg text-center text-sm text-muted-foreground">
+          <p className="mx-auto mt-2 max-w-lg text-center text-sm text-primary-foreground/70">
             With an expert team, you get more than just solar panels. You'll receive specialist advice, high-quality products, and ongoing support.
           </p>
           <CollapsibleContent>
