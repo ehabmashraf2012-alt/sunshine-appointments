@@ -16,7 +16,7 @@ const accreditations = ["HIES Member", "FCA Approved", "Trustpilot Excellent", "
 
 const AuthorityTrust = () => {
   return (
-    <section className="bg-solar-green-light px-4 py-16 md:py-24">
+    <section className="bg-solar-green-light px-4 py-10 md:py-24">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
