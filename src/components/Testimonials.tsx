@@ -69,15 +69,15 @@ const Testimonials = () => {
             We're Rated 'Excellent'
           </h2>
           <div className="mx-auto mt-3 flex flex-wrap items-center justify-center gap-2">
+            {/* Trustpilot text logo */}
+            <span className="text-sm font-bold text-foreground">★ Trustpilot</span>
+            <span className="text-sm text-muted-foreground">· by 5,700+ verified customers</span>
             <div className="flex">
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star key={i} className="h-5 w-5 fill-solar-gold text-solar-gold" />
               ))}
             </div>
             <span className="text-sm font-semibold text-foreground">4.9 Rating</span>
-            <span className="text-sm text-muted-foreground">· by 5,700+ verified customers on</span>
-            {/* Trustpilot text logo */}
-            <span className="text-sm font-bold text-foreground">★ Trustpilot</span>
           </div>
         </div>
 
