@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import FeaturedIn from "@/components/FeaturedIn";
 import StickyCTA from "@/components/StickyCTA";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HowItWorks from "@/components/HowItWorks";
@@ -22,6 +23,7 @@ const Index = () => {
       <Header onOpenForm={openForm} />
       <StickyCTA onOpenForm={openForm} />
       <HeroSection onOpenForm={openForm} />
+      <FeaturedIn />
       <Testimonials />
       <HowItWorks />
       <WhyChooseUs />
