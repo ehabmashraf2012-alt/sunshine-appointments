@@ -37,7 +37,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Fed up of rising costs? We've helped 50,000+ homeowners reduce their monthly bills with solar and we've helped over 5,700 families slash their bills. Check if your home qualifies in under 2 minutes.
+            Fed up of rising costs? We've helped 50,000+ homeowners reduce their monthly bills with solar and storage
           </p>
         </motion.div>
 
