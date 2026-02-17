@@ -1,4 +1,4 @@
-import { CreditCard, CalendarClock, KeyRound } from "lucide-react";
+import { CreditCard, CalendarClock } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -14,14 +14,7 @@ const options = [
     icon: CalendarClock,
     title: "Finance Plans",
     description: (
-      <>Fixed monthly payments with <strong className="text-foreground">no hidden fees and double indemnity</strong>. Choose a term length that suits you.</>
-    ),
-  },
-  {
-    icon: KeyRound,
-    title: "Leasing",
-    description: (
-      <>Low initial outlay and immediate access to solar energy upon installation. <strong className="text-foreground">Save on bills from day one.</strong></>
+      <>Fixed monthly payments with <strong className="text-foreground">no hidden fees and full indemnity guarantee</strong>. Choose a term length that suits you.</>
     ),
   },
 ];
@@ -31,7 +24,7 @@ const PricingSection = () => {
 
   return (
     <section className="bg-background px-4 py-10 md:py-24">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
             Worried About the Costs?
@@ -41,7 +34,7 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {options.map((opt, i) => {
             const isSelected = selected === i;
             const Icon = opt.icon;

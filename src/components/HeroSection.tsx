@@ -102,19 +102,23 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           <div className="flex items-center gap-1.5">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className={`h-5 w-5 ${i <= 4 ? "fill-solar-gold text-solar-gold" : "fill-solar-gold/50 text-solar-gold/50"}`} />
+                <Star key={i} className={`h-5 w-5 ${i <= 5 ? "fill-solar-gold text-solar-gold" : "fill-solar-gold/50 text-solar-gold/50"}`} />
               ))}
             </div>
-            <span className="ml-1 text-sm font-semibold text-foreground">4.6/5</span>
-            <span className="text-sm text-muted-foreground">on Trustpilot</span>
+            <span className="ml-1 text-sm font-semibold text-foreground">4.9/5</span>
+            <span className="text-sm text-muted-foreground">Rated Excellent</span>
           </div>
           <div className="hidden h-5 w-px bg-border sm:block" />
           <p className="text-sm text-muted-foreground">
-            <span className="font-semibold text-foreground">5,700+</span> verified customers
+            <span className="font-semibold text-foreground">25 Year</span> Warranty
           </p>
           <div className="hidden h-5 w-px bg-border sm:block" />
           <p className="text-sm text-muted-foreground">
-            <span className="font-semibold text-foreground">25 Year</span> Warranty
+            <span className="font-semibold text-foreground">HIES</span> Member
+          </p>
+          <div className="hidden h-5 w-px bg-border sm:block" />
+          <p className="text-sm text-muted-foreground">
+            <span className="font-semibold text-foreground">FCA</span> Approved
           </p>
         </motion.div>
       </div>
