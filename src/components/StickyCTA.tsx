@@ -20,26 +20,22 @@ const StickyCTA = ({ onOpenForm }: StickyCTAProps) => {
   return (
     <AnimatePresence>
       {visible && (
-        <motion.nav
+        <motion.div
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
           transition={{ duration: 0.3 }}
           className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md"
         >
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-            <span className="font-display text-base font-bold text-foreground">
-              Solar & Battery Scheme
-            </span>
+          <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-3">
             <Button
               onClick={onOpenForm}
-              size="sm"
-              className="rounded-lg font-semibold shadow-md shadow-primary/20"
+              className="rounded-full font-semibold shadow-md shadow-primary/20"
             >
               Free Eligibility Check
             </Button>
           </div>
-        </motion.nav>
+        </motion.div>
       )}
     </AnimatePresence>
   );
