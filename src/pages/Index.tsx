@@ -1,12 +1,13 @@
 import { useState } from "react";
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import StickyCTA from "@/components/StickyCTA";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HowItWorks from "@/components/HowItWorks";
 import PricingSection from "@/components/PricingSection";
+import VATBanner from "@/components/VATBanner";
 import Testimonials from "@/components/Testimonials";
 import EligibilitySavings from "@/components/EligibilitySavings";
-import VATBanner from "@/components/VATBanner";
 import AuthorityTrust from "@/components/AuthorityTrust";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -18,6 +19,7 @@ const Index = () => {
 
   return (
     <>
+      <Header onOpenForm={openForm} />
       <StickyCTA onOpenForm={openForm} />
       <HeroSection onOpenForm={openForm} />
       <WhyChooseUs />
