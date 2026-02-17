@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="bg-background px-4 py-10 md:py-20">
+    <section className="bg-solar-green-light px-4 py-10 md:py-20">
       <div className="mx-auto max-w-5xl">
         <Collapsible open={open} onOpenChange={setOpen}>
           <CollapsibleTrigger asChild>
