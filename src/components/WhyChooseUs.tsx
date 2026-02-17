@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
                 <img
                   src={kevinHeadshot}
                   alt="Kevin McCloud with solar battery storage system"
-                  className="h-56 w-full object-cover object-top md:h-72"
+                  className="h-56 w-full object-cover object-[center_40%] md:h-72"
                 />
               </div>
 
