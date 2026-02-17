@@ -15,7 +15,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
         <img
           src={heroImage}
           alt="Solar panel installation"
-          className="h-full w-full object-cover opacity-[0.30]"
+          className="h-full w-full object-cover opacity-[0.20]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
       </div>
