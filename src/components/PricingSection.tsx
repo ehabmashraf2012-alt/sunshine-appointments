@@ -23,7 +23,7 @@ const PricingSection = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <section className="bg-background px-4 py-10 md:py-24">
+    <section className="bg-background px-4 py-10 md:py-16">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
