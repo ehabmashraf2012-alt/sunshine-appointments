@@ -1,4 +1,4 @@
-import { CheckCircle, Star } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-installers.png";
@@ -96,38 +96,6 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </div>
         </motion.div>
 
-        {/* Social proof strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8"
-        >
-          <div className="flex items-center gap-1.5">
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <Star
-                  key={i}
-                  className="h-5 w-5 fill-solar-gold text-solar-gold"
-                />
-              ))}
-            </div>
-            <span className="ml-1 text-sm font-semibold text-foreground">4.9/5</span>
-            <span className="text-sm text-muted-foreground">Rated Excellent</span>
-          </div>
-          <div className="hidden h-5 w-px bg-border sm:block" />
-          <p className="text-sm text-muted-foreground">
-            <span className="font-semibold text-foreground">25 Year</span> Warranty
-          </p>
-          <div className="hidden h-5 w-px bg-border sm:block" />
-          <p className="text-sm text-muted-foreground">
-            <span className="font-semibold text-foreground">HIES</span> Member
-          </p>
-          <div className="hidden h-5 w-px bg-border sm:block" />
-          <p className="text-sm text-muted-foreground">
-            <span className="font-semibold text-foreground">FCA</span> Approved
-          </p>
-        </motion.div>
       </div>
     </section>
   );
