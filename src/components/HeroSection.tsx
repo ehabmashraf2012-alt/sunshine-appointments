@@ -1,7 +1,7 @@
 import { CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import heroBanner from "@/assets/hp-banner-2.webp";
+import heroImage from "@/assets/hero-installers.png";
 
 interface HeroSectionProps {
   onOpenForm: () => void;
@@ -13,9 +13,9 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
       {/* Background image with overlay */}
       <div className="pointer-events-none absolute inset-0">
         <img
-          src={heroBanner}
+          src={heroImage}
           alt="Solar panel installation"
-          className="h-full w-full object-cover opacity-[0.07]"
+          className="h-full w-full object-cover opacity-[0.06]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
       </div>
@@ -49,16 +49,17 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 flex flex-col items-center gap-6"
         >
-          {/* Eligibility criteria */}
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">You may be eligible if you are:</p>
+          {/* Eligibility criteria — green box */}
+          <div className="rounded-2xl border border-primary/20 bg-solar-green-light px-6 py-5 shadow-sm">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
+              You may be eligible if you are:
+            </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
-              {[
-                "Homeowner",
-                "Staying 3+ Years",
-                "£150+ Monthly Bill",
-              ].map((prop) => (
-                <div key={prop} className="flex items-center gap-2 text-sm font-medium text-foreground md:text-base">
+              {["Homeowner", "Staying 3+ Years", "£150+ Monthly Bill"].map((prop) => (
+                <div
+                  key={prop}
+                  className="flex items-center gap-2 text-sm font-medium text-foreground md:text-base"
+                >
                   <CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" />
                   {prop}
                 </div>
@@ -78,17 +79,21 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
             No obligation · Takes 2 minutes · Completely free
           </p>
 
-
           {/* Join social proof */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <div className="flex -space-x-2">
               {[0, 1, 2].map((i) => (
-                <div key={i} className="h-7 w-7 rounded-full border-2 border-background bg-primary/20 flex items-center justify-center text-[10px] font-bold text-primary">
+                <div
+                  key={i}
+                  className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-background bg-primary/20 text-[10px] font-bold text-primary"
+                >
                   {["JB", "SD", "MR"][i]}
                 </div>
               ))}
             </div>
-            <span>Join <strong className="text-foreground">150+ people</strong> this week</span>
+            <span>
+              Join <strong className="text-foreground">150+ people</strong> this week
+            </span>
           </div>
         </motion.div>
 
@@ -102,7 +107,10 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           <div className="flex items-center gap-1.5">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className={`h-5 w-5 ${i <= 5 ? "fill-solar-gold text-solar-gold" : "fill-solar-gold/50 text-solar-gold/50"}`} />
+                <Star
+                  key={i}
+                  className="h-5 w-5 fill-solar-gold text-solar-gold"
+                />
               ))}
             </div>
             <span className="ml-1 text-sm font-semibold text-foreground">4.9/5</span>

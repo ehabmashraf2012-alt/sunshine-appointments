@@ -5,13 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 interface EligibilityFormProps {
   open: boolean;
   onClose: () => void;
 }
 
-const TOTAL_STEPS = 7;
+const TOTAL_STEPS = 6;
 
 const propertyTypes = [
   { label: "Detached", icon: Home },
@@ -35,6 +36,7 @@ const slideVariants = {
 };
 
 const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [direction, setDirection] = useState(1);
   const [data, setData] = useState({
@@ -49,7 +51,7 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const progress = step === TOTAL_STEPS ? 100 : ((step - 1) / (TOTAL_STEPS - 1)) * 100;
+  const progress = ((step - 1) / (TOTAL_STEPS - 1)) * 100;
 
   const goNext = () => { setDirection(1); setStep((s) => s + 1); };
   const goBack = () => { setDirection(-1); setStep((s) => s - 1); };
@@ -63,15 +65,49 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
     }, 300);
   };
 
-  const validateStep6 = () => {
+  const validateUKPhone = (phone: string): boolean => {
+    const cleaned = phone.replace(/[\s\-()]/g, "");
+    // UK mobile: 07xxx or +447xxx (11 digits starting 07, or 12/13 with +44/0044)
+    const ukMobile = /^(\+44|0044)?0?7\d{9}$/;
+    // UK landline: 01/02/03
+    const ukLandline = /^(\+44|0044)?0?[1-3]\d{8,9}$/;
+    return ukMobile.test(cleaned) || ukLandline.test(cleaned);
+  };
+
+  const validateContactStep = () => {
     const newErrors: Record<string, string> = {};
-    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) newErrors.email = "Please enter a valid email";
-    if (!data.phone || !/^[\d\s+()-]{10,15}$/.test(data.phone.replace(/\s/g, ""))) newErrors.phone = "Please enter a valid UK phone number";
+    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+    if (!data.phone) {
+      newErrors.phone = "Please enter your phone number";
+    } else if (!validateUKPhone(data.phone)) {
+      newErrors.phone = "Please enter a valid UK phone number (e.g. 07700 900000)";
+    }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
+  const handleSubmit = () => {
+    if (!validateContactStep()) return;
+    const params = new URLSearchParams({
+      "your-name": `${data.firstName} ${data.lastName}`,
+      phone: data.phone,
+      email: data.email,
+    });
+    onClose();
+    setTimeout(() => {
+      setStep(1);
+      setData({ propertyType: "", homeowner: "", bill: "", postcode: "", firstName: "", lastName: "", email: "", phone: "" });
+      setErrors({});
+    }, 300);
+    navigate(`/thanks?${params.toString()}`);
+  };
+
   if (!open) return null;
+
+  // Non-homeowner dead-end step
+  const isNonHomeowner = step === 3 && data.homeowner === "no";
 
   return (
     <motion.div
@@ -90,13 +126,13 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-border px-6 py-4">
           <div className="flex items-center gap-3">
-            {step > 1 && step < TOTAL_STEPS && (
+            {step > 1 && !isNonHomeowner && (
               <button onClick={goBack} className="rounded-lg p-1 text-muted-foreground hover:text-foreground">
                 <ArrowLeft className="h-5 w-5" />
               </button>
             )}
             <h3 className="font-display text-lg font-bold text-foreground">
-              {step < TOTAL_STEPS ? "Free Eligibility Check" : "You're Eligible!"}
+              Free Eligibility Check
             </h3>
           </div>
           <button onClick={handleClose} className="rounded-lg p-1 text-muted-foreground hover:text-foreground">
@@ -105,14 +141,16 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
         </div>
 
         {/* Progress */}
-        <div className="px-6 pt-4">
-          <Progress value={progress} className="h-1.5" />
-          <div className="mt-2 flex justify-between text-xs text-muted-foreground">
-            <span>Your Home</span>
-            <span>Your Details</span>
-            <span>Eligibility Check</span>
+        {!isNonHomeowner && (
+          <div className="px-6 pt-4">
+            <Progress value={progress} className="h-1.5" />
+            <div className="mt-2 flex justify-between text-xs text-muted-foreground">
+              <span>Your Home</span>
+              <span>Your Details</span>
+              <span>Submit</span>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Content */}
         <div className="min-h-[340px] overflow-hidden px-6 py-6">
@@ -157,9 +195,9 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
                 </div>
               )}
 
-              {step === 3 && data.homeowner === "no" && (
+              {isNonHomeowner && (
                 <div className="text-center">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-solar-warm">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-solar-green-light">
                     <Home className="h-8 w-8 text-muted-foreground" />
                   </div>
                   <h4 className="font-display text-xl font-bold text-foreground">Unfortunately, you need to be a homeowner</h4>
@@ -231,27 +269,8 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
                       <Input id="phone" type="tel" value={data.phone} onChange={(e) => { setData({ ...data, phone: e.target.value }); setErrors({ ...errors, phone: "" }); }} className={`mt-1 h-12 rounded-xl ${errors.phone ? "border-destructive" : ""}`} placeholder="07700 900000" />
                       {errors.phone && <p className="mt-1 text-xs text-destructive">{errors.phone}</p>}
                     </div>
-                    <Button onClick={() => { if (validateStep6()) goNext(); }} className="h-12 w-full rounded-xl text-base font-semibold">Check My Eligibility</Button>
+                    <Button onClick={handleSubmit} className="h-12 w-full rounded-xl text-base font-semibold">Check My Eligibility</Button>
                   </div>
-                </div>
-              )}
-
-              {step === TOTAL_STEPS && (
-                <div className="text-center">
-                  <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-solar-green-light">
-                    <Check className="h-10 w-10 text-primary" />
-                  </div>
-                  <h4 className="font-display text-2xl font-bold text-foreground">Great News, {data.firstName}!</h4>
-                  <p className="mt-3 text-muted-foreground">Based on your answers, your home appears to be eligible for solar and battery storage.</p>
-                  <div className="mt-6 rounded-xl border border-border bg-solar-green-light p-4 text-left">
-                    <h5 className="font-display text-sm font-bold text-foreground">What happens next?</h5>
-                    <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />A solar expert will call you within 24 hours</li>
-                      <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />We'll arrange a free, no-obligation home survey</li>
-                      <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />You'll receive a personalised quote and savings estimate</li>
-                    </ul>
-                  </div>
-                  <Button onClick={handleClose} className="mt-6 h-12 w-full rounded-xl text-base font-semibold">Done</Button>
                 </div>
               )}
             </motion.div>
@@ -259,15 +278,15 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
         </div>
 
         {/* Trust footer */}
-        {step < TOTAL_STEPS && (
+        {!isNonHomeowner && (
           <div className="border-t border-border px-6 py-3">
             <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className={`h-3 w-3 ${i <= 4 ? "fill-solar-gold text-solar-gold" : "fill-solar-gold/50 text-solar-gold/50"}`} />
+                  <Star key={i} className="h-3 w-3 fill-solar-gold text-solar-gold" />
                 ))}
               </div>
-              <span>Rated 4.6/5 by 5,700+ customers</span>
+              <span>Rated 4.9/5 by 5,700+ customers</span>
             </div>
           </div>
         )}
