@@ -49,20 +49,8 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 flex flex-col items-center gap-6"
         >
-          <Button
-            onClick={onOpenForm}
-            size="lg"
-            className="mt-2 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
-          >
-            Check Eligibility
-          </Button>
-
-          <p className="text-sm text-muted-foreground">
-            No obligation · Takes 2 minutes · Completely free
-          </p>
-
           {/* Eligibility criteria */}
-          <div className="mt-2 flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-2">
             <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">You may be eligible if you are:</p>
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
               {[
@@ -77,6 +65,19 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
               ))}
             </div>
           </div>
+
+          <Button
+            onClick={onOpenForm}
+            size="lg"
+            className="mt-2 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
+          >
+            Check Eligibility
+          </Button>
+
+          <p className="text-sm text-muted-foreground">
+            No obligation · Takes 2 minutes · Completely free
+          </p>
+
 
           {/* Join social proof */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
