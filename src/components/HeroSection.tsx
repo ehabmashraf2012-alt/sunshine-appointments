@@ -27,8 +27,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-solar-green-light px-4 py-1.5 text-sm font-medium text-primary">
-            <Star className="h-3.5 w-3.5 fill-solar-gold text-solar-gold" />
-            Solar & Battery Scheme
+            The UK's Leading Installer
           </div>
 
           <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl">
