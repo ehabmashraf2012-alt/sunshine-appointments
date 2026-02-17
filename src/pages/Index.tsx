@@ -22,8 +22,8 @@ const Index = () => {
       <Header onOpenForm={openForm} />
       <StickyCTA onOpenForm={openForm} />
       <HeroSection onOpenForm={openForm} />
-      <WhyChooseUs />
       <HowItWorks />
+      <WhyChooseUs />
       <PricingSection />
       <VATBanner onOpenForm={openForm} />
       <Testimonials />
