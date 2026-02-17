@@ -27,7 +27,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-solar-green-light px-4 py-1.5 text-sm font-medium text-primary">
-            The UK's Leading Installer
+            The UK's leading solar installer
           </div>
 
           <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl">
@@ -37,8 +37,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            We've helped over 5,700 families slash their bills. Check if your
-            home qualifies in under 2 minutes.
+            Fed up of rising costs? We've helped 50,000+ homeowners reduce their monthly bills with solar and we've helped over 5,700 families slash their bills. Check if your home qualifies in under 2 minutes.
           </p>
         </motion.div>
 
@@ -51,7 +50,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           {/* Eligibility criteria — green box */}
           <div className="rounded-2xl border border-primary/20 bg-solar-green-light px-6 py-5 shadow-sm">
             <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
-              You may be eligible if you are:
+              Free Solar Quote Requirements:
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
               {["Homeowner", "Staying 3+ Years", "£150+ Monthly Bill"].map((prop) => (
@@ -71,11 +70,11 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
             size="lg"
             className="mt-2 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
           >
-            Check Eligibility
+            Get your custom quote
           </Button>
 
           <p className="text-sm text-muted-foreground">
-            No obligation · Takes 2 minutes · Completely free
+            No obligation - Takes 2 minutes - Quick call back
           </p>
 
           {/* Join social proof */}

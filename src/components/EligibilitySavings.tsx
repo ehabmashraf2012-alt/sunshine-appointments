@@ -16,7 +16,7 @@ const EligibilitySavings = ({ onOpenForm }: EligibilitySavingsProps) => {
             Could You Save Up to 70%?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Most UK homeowners are eligible. Check in under 2 minutes.
+            Do the following apply to you? If so start your journey to saving on your energy today.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ const EligibilitySavings = ({ onOpenForm }: EligibilitySavingsProps) => {
               size="lg"
               className="mt-8 h-14 w-full rounded-xl text-lg font-semibold shadow-lg shadow-primary/25"
             >
-              Check Your Eligibility
+              Get your custom quote today
             </Button>
           </div>
         </div>
