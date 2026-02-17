@@ -9,7 +9,7 @@ const outlets = [
 
 const LogoItem = ({ outlet }: { outlet: typeof outlets[number] }) => (
   <span
-    className={`${outlet.size} ${outlet.tracking ?? ""} shrink-0 text-foreground/70 ${outlet.italic ? "italic" : ""}`}
+    className={`${outlet.size} ${outlet.tracking ?? ""} shrink-0 text-primary-foreground/80 ${outlet.italic ? "italic" : ""}`}
     style={{ fontFamily: outlet.font, fontWeight: outlet.weight }}
   >
     {outlet.name}
@@ -21,9 +21,9 @@ const FeaturedIn = () => {
   const doubled = [...outlets, ...outlets];
 
   return (
-    <section className="border-y border-border bg-solar-green-light py-6 overflow-hidden">
+    <section className="border-y border-primary/20 bg-primary py-6 overflow-hidden">
       <div className="flex items-center gap-8 md:gap-12">
-        <span className="shrink-0 pl-6 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+        <span className="shrink-0 pl-6 text-sm font-semibold uppercase tracking-wider text-primary-foreground/60">
           Featured In
         </span>
         <div className="relative flex overflow-hidden">
