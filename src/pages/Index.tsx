@@ -10,6 +10,7 @@ import VATBanner from "@/components/VATBanner";
 import Testimonials from "@/components/Testimonials";
 import EligibilitySavings from "@/components/EligibilitySavings";
 import AuthorityTrust from "@/components/AuthorityTrust";
+import TrustPromise from "@/components/TrustPromise";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import EligibilityForm from "@/components/EligibilityForm";
@@ -30,6 +31,7 @@ const Index = () => {
       <VATBanner onOpenForm={openForm} />
       <EligibilitySavings onOpenForm={openForm} />
       <AuthorityTrust />
+      <TrustPromise />
       <FAQSection />
       <FinalCTA onOpenForm={openForm} />
       <EligibilityForm open={formOpen} onClose={() => setFormOpen(false)} />
