@@ -1,4 +1,4 @@
-import { ShieldCheck, Headset, FileCheck, HardHat } from "lucide-react";
+import { ShieldCheck, Headset, FileCheck, HardHat, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const painPoints = [
@@ -53,12 +53,15 @@ const TrustPromise = () => {
               <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
                 <item.icon className="h-5 w-5 text-destructive" />
               </div>
-              <p className="text-sm font-bold text-foreground">
-                {item.problem}
+              <p className="text-sm text-muted-foreground">
+                Others: <span className="font-semibold">{item.problem}</span>
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {item.solution}
-              </p>
+              <div className="mt-3 flex items-start gap-2 rounded-lg bg-solar-green-light p-3">
+                <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <p className="text-sm font-medium leading-relaxed text-foreground">
+                  {item.solution}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
