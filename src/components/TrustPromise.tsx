@@ -53,10 +53,10 @@ const TrustPromise = () => {
               <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
                 <item.icon className="h-5 w-5 text-destructive" />
               </div>
-              <p className="text-sm font-semibold text-destructive/80 line-through">
+              <p className="text-sm font-bold text-foreground">
                 {item.problem}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-foreground font-medium">
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {item.solution}
               </p>
             </motion.div>
@@ -71,10 +71,10 @@ const TrustPromise = () => {
           className="mt-8 rounded-2xl bg-primary p-6 text-center md:p-8"
         >
           <p className="text-lg font-bold text-primary-foreground md:text-xl">
-            50,000+ systems installed across the UK
+            50,000+ systems installed. Zero reasons to worry.
           </p>
           <p className="mx-auto mt-2 max-w-lg text-sm text-primary-foreground/80">
-            All our customers need to worry about is how to make use of their savings.
+            Every issue above? Already solved. So all you need to think about is what to do with the savings.
           </p>
         </motion.div>
       </div>
