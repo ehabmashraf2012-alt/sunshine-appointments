@@ -26,7 +26,7 @@ const painPoints = [
 
 const TrustPromise = () => {
   return (
-    <section className="bg-background px-4 py-10 md:py-24">
+    <section className="bg-background px-6 py-10 md:px-4 md:py-24">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary">
