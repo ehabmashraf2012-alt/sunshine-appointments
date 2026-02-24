@@ -5,22 +5,22 @@ const painPoints = [
   {
     icon: HardHat,
     problem: "Installers who vanish",
-    solution: "50,000+ certified installations across the UK — we're not going anywhere.",
+    solution: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
   },
   {
     icon: FileCheck,
     problem: "Warranties that don't hold up",
-    solution: "Insurance-backed guarantees that protect you, not just promises on paper.",
+    solution: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
   },
   {
     icon: ShieldCheck,
     problem: "No accountability after payment",
-    solution: "Dedicated UK support team for the lifetime of your system.",
+    solution: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
   },
   {
     icon: Headset,
     problem: "Sales reps who disappear",
-    solution: "End-to-end project management from survey to switch-on and beyond.",
+    solution: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
   },
 ];
 
