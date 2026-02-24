@@ -1,26 +1,26 @@
-import { ShieldCheck, Headset, FileCheck, HardHat, CheckCircle } from "lucide-react";
+import { Check, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const painPoints = [
   {
-    icon: HardHat,
-    problem: "Installers who vanish",
-    solution: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    concern: "Installers who vanish",
+    others: "No guarantees they'll be around next year",
+    us: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    icon: FileCheck,
-    problem: "Warranties that don't hold up",
-    solution: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    concern: "Warranties that don't hold up",
+    others: "Paper promises with no real backing",
+    us: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    icon: ShieldCheck,
-    problem: "No accountability after payment",
-    solution: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    concern: "No accountability after payment",
+    others: "Good luck reaching anyone post-install",
+    us: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    icon: Headset,
-    problem: "Sales reps who disappear",
-    solution: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    concern: "Sales reps who disappear",
+    others: "Once the deposit clears, they're gone",
+    us: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 
@@ -40,31 +40,50 @@ const TrustPromise = () => {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          {painPoints.map((item, i) => (
-            <motion.div
-              key={item.problem}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="rounded-2xl border border-border bg-card p-6 shadow-sm"
-            >
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
-                <item.icon className="h-5 w-5 text-destructive" />
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Others: <span className="font-semibold">{item.problem}</span>
-              </p>
-              <div className="mt-3 flex items-start gap-2 rounded-lg bg-solar-green-light p-3">
-                <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <p className="text-sm font-medium leading-relaxed text-foreground">
-                  {item.solution}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 overflow-x-auto rounded-2xl border border-border bg-background shadow-sm"
+        >
+          <table className="w-full min-w-[500px] text-sm">
+            <thead>
+              <tr className="border-b border-border bg-muted">
+                <th className="px-3 py-3 text-left font-display text-xs font-semibold text-foreground md:px-6 md:text-sm">
+                  The Concern
+                </th>
+                <th className="px-3 py-3 text-center font-display text-xs font-semibold text-muted-foreground md:px-6 md:text-sm">
+                  <div className="flex items-center justify-center gap-1.5">
+                    <X className="h-4 w-4 text-destructive" />
+                    Others
+                  </div>
+                </th>
+                <th className="px-3 py-3 text-center font-display text-xs font-semibold text-primary md:px-6 md:text-sm">
+                  <div className="flex items-center justify-center gap-1.5">
+                    <Check className="h-4 w-4 text-primary" />
+                    Our Partners
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {painPoints.map((row, i) => (
+                <tr key={row.concern} className={i % 2 === 0 ? "" : "bg-muted/50"}>
+                  <td className="px-3 py-3 text-xs font-semibold text-foreground md:px-6 md:py-4 md:text-sm">
+                    {row.concern}
+                  </td>
+                  <td className="px-3 py-3 text-center text-xs text-muted-foreground md:px-6 md:py-4 md:text-sm">
+                    {row.others}
+                  </td>
+                  <td className="px-3 py-3 text-center text-xs font-medium text-primary md:px-6 md:py-4 md:text-sm">
+                    {row.us}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
