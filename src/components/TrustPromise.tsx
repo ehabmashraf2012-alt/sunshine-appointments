@@ -72,13 +72,13 @@ const TrustPromise = () => {
                     <div className="flex items-start gap-2 rounded-lg bg-destructive/10 p-3">
                       <item.icon className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
                       <p className="text-sm font-medium leading-relaxed text-destructive">
-                        Others: {item.problem}
+                        Budget Installers: {item.problem}
                       </p>
                     </div>
                     <div className="mt-3 flex items-start gap-2 rounded-lg bg-solar-green-light p-3">
                       <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                       <p className="text-sm font-medium leading-relaxed text-foreground">
-                        {item.solution}
+                        Our Specialists: {item.solution}
                       </p>
                     </div>
                   </motion.div>
