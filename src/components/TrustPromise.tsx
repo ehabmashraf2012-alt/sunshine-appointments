@@ -31,25 +31,25 @@ const TrustPromise = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="bg-solar-green-light px-6 py-10 md:px-4 md:py-24">
+    <section className="bg-primary px-6 py-10 md:px-4 md:py-24">
       <div className="mx-auto max-w-4xl">
         <Collapsible open={open} onOpenChange={setOpen}>
           <CollapsibleTrigger asChild>
             <button className="group mx-auto flex w-full max-w-lg flex-col items-center text-center">
-              <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+              <p className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/70">
                 Your Home. Your Investment.
               </p>
               <div className="mt-2 flex items-center gap-3">
-                <h2 className="font-display text-2xl font-bold text-foreground md:text-3xl">
+                <h2 className="font-display text-2xl font-bold text-primary-foreground md:text-3xl">
                   The savings aren't the scary part
                 </h2>
                 <ChevronDown
-                  className={`h-6 w-6 text-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+                  className={`h-6 w-6 text-primary-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
                 />
               </div>
             </button>
           </CollapsibleTrigger>
-          <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted-foreground">
+          <p className="mx-auto mt-2 max-w-xl text-center text-sm text-primary-foreground/70">
             Trusting the wrong team on your roof is.
           </p>
 
