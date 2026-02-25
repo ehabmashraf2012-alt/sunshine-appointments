@@ -31,7 +31,7 @@ const TrustPromise = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="bg-background px-6 py-10 md:px-4 md:py-24">
+    <section className="bg-solar-green-light px-6 py-10 md:px-4 md:py-24">
       <div className="mx-auto max-w-4xl">
         <Collapsible open={open} onOpenChange={setOpen}>
           <CollapsibleTrigger asChild>
