@@ -1,4 +1,4 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-installers.png";
@@ -27,6 +27,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-solar-green-light px-4 py-1.5 text-sm font-medium text-primary">
+            <Trophy className="h-4 w-4" />
             The UK's leading solar installer
           </div>
 
