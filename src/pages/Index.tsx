@@ -27,10 +27,10 @@ const Index = () => {
       <Testimonials />
       <TrustPromise />
       <PricingSection />
+      <VATBanner onOpenForm={openForm} />
       <EligibilitySavings onOpenForm={openForm} />
       <WhyChooseUs />
       <HowItWorks />
-      <VATBanner onOpenForm={openForm} />
       <AuthorityTrust />
       <FAQSection />
       <FinalCTA onOpenForm={openForm} />
