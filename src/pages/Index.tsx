@@ -26,10 +26,10 @@ const Index = () => {
       <HeroSection onOpenForm={openForm} />
       <Testimonials />
       <TrustPromise />
+      <PricingSection />
       <EligibilitySavings onOpenForm={openForm} />
       <WhyChooseUs />
       <HowItWorks />
-      <PricingSection />
       <VATBanner onOpenForm={openForm} />
       <AuthorityTrust />
       <FAQSection />
