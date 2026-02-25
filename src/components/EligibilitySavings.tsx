@@ -69,7 +69,7 @@ const EligibilitySavings = ({ onOpenForm }: EligibilitySavingsProps) => {
               size="lg"
               className="mt-8 h-14 w-full rounded-xl text-lg font-semibold shadow-lg shadow-primary/25"
             >
-              Get your custom quote today
+              Check Your Eligibility — It's Free
             </Button>
           </div>
         </div>
