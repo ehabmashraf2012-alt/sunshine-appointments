@@ -69,12 +69,12 @@ const TrustPromise = () => {
                     transition={{ duration: 0.4, delay: i * 0.1 }}
                     className="rounded-2xl border border-border bg-card p-6 shadow-sm"
                   >
-                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
-                      <item.icon className="h-5 w-5 text-destructive" />
+                    <div className="flex items-start gap-2 rounded-lg bg-destructive/10 p-3">
+                      <item.icon className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
+                      <p className="text-sm font-medium leading-relaxed text-destructive">
+                        Others: {item.problem}
+                      </p>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      Others: <span className="font-semibold">{item.problem}</span>
-                    </p>
                     <div className="mt-3 flex items-start gap-2 rounded-lg bg-solar-green-light p-3">
                       <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                       <p className="text-sm font-medium leading-relaxed text-foreground">
