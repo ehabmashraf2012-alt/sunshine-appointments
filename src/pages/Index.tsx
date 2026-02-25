@@ -25,13 +25,13 @@ const Index = () => {
       <StickyCTA onOpenForm={openForm} />
       <HeroSection onOpenForm={openForm} />
       <Testimonials />
+      <TrustPromise />
       <WhyChooseUs />
       <HowItWorks />
       <PricingSection />
       <VATBanner onOpenForm={openForm} />
       <EligibilitySavings onOpenForm={openForm} />
       <AuthorityTrust />
-      <TrustPromise />
       <FAQSection />
       <FinalCTA onOpenForm={openForm} />
       <EligibilityForm open={formOpen} onClose={() => setFormOpen(false)} />
