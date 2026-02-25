@@ -28,11 +28,11 @@ const Index = () => {
       <TrustPromise />
       <PricingSection />
       <VATBanner onOpenForm={openForm} />
+      <FAQSection />
       <EligibilitySavings onOpenForm={openForm} />
       <WhyChooseUs />
       <HowItWorks />
       <AuthorityTrust />
-      <FAQSection />
       <FinalCTA onOpenForm={openForm} />
       <EligibilityForm open={formOpen} onClose={() => setFormOpen(false)} />
     </div>
