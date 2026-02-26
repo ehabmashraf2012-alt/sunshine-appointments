@@ -34,7 +34,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
             onClick={onOpenForm}
             className="rounded-full font-semibold shadow-md shadow-primary/20"
           >
-            Check Your Eligibility — It's Free
+            Free Solar Consultation
           </Button>
         </div>
       </div>

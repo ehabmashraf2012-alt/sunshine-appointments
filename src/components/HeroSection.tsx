@@ -71,7 +71,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
             size="lg"
             className="mt-2 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
           >
-            Check Your Eligibility — It's Free
+            Free Solar Consultation
           </Button>
 
           <p className="text-sm text-muted-foreground">
