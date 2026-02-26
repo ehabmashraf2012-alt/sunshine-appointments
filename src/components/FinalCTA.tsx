@@ -37,7 +37,7 @@ const FinalCTA = ({ onOpenForm }: FinalCTAProps) => {
           variant="secondary"
           className="mt-8 h-14 rounded-xl px-10 text-lg font-semibold text-primary shadow-lg transition-all hover:scale-[1.02]"
         >
-          Check Your Eligibility — It's Free
+          Free Solar Consultation
         </Button>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
