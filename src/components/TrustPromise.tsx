@@ -7,23 +7,23 @@ import { ChevronDown } from "lucide-react";
 const painPoints = [
   {
     icon: HardHat,
-    problem: "Installers who vanish",
+    problem: "Treat your home like a training ground.",
+    solution: "Professionalism and experience is non-negotiable for our customers.",
+  },
+  {
+    icon: Headset,
+    problem: "Sales reps and installers that vanish.",
     solution: "50,000+ certified installations across the UK — we're not going anywhere.",
   },
   {
     icon: FileCheck,
-    problem: "Warranties that don't hold up",
-    solution: "Insurance-backed guarantees that protect you, not just promises on paper.",
+    problem: "Warranties that don't hold up.",
+    solution: "Peace of mind through insurance-backed guarantees and MCS-certified standards.",
   },
   {
     icon: ShieldCheck,
-    problem: "No accountability after payment",
-    solution: "Dedicated UK support team for the lifetime of your system.",
-  },
-  {
-    icon: Headset,
-    problem: "Sales reps who disappear",
-    solution: "End-to-end project management from survey to switch-on and beyond.",
+    problem: "No accountability after installation.",
+    solution: "Dedicated UK support team for the lifetime of your solar & battery system.",
   },
 ];
 
