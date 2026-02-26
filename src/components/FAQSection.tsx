@@ -11,24 +11,24 @@ const faqs = [
     a: "Complete our free quote form and a solar expert will be in touch to give you an initial insight into how much you could save on your annual electricity bills and the potential cost of solar and battery storage installation.",
   },
   {
+    q: "What will my solar installation journey look like?",
+    a: "1) Expert Installation: your high performance system will include a bespoke design tailored to maximise your roof space and allow you to capture as much sunlight as possible. 2) Store Your Energy with a smart battery storage system that will capture excess energy and power your home at night or during peak times when electricity costs more. 3) Power your home using your own electricity at any time of the day or night. Say goodbye to paying the extortionate costs to your current energy supplier. 4) Congratulations! You have taken control of your energy future. Your panels are backed by a lifetime warranty and an expert team will be on hand if you need support.",
+  },
+  {
     q: "Will my solar panels work on cloudy days?",
-    a: "Yes — absolutely. Your panels are chosen for their high performance in the UK climate. Even on overcast days, they generate substantial electricity thanks to modern photovoltaic technology that captures diffused sunlight, not just direct rays.",
+    a: "Yes absolutely. Your panels are chosen for their high performance in the UK climate. Even on overcast days, they generate substantial electricity thanks to modern photovoltaic technology that captures diffused sunlight, not just direct rays.",
   },
   {
     q: "How does solar work?",
-    a: "Solar panels capture sunlight and convert it into electricity, which an inverter transforms into usable power for your home. During the day, you can use free solar energy or store excess in a battery for future use. This helps lower bills, increase energy independence, and reduce your carbon footprint — all from the sun!",
+    a: "Solar panels capture sunlight and convert it into electricity, which an inverter transforms into usable power for your home. During the day, you can use free solar energy or store excess in a battery for future use. This helps lower bills, increase energy independence, and reduce your carbon footprint...all from the sun!",
   },
   {
     q: "What's driving UK energy costs up?",
-    a: "A combination of global gas supply issues, rising grid demand from EVs and heat pumps straining infrastructure, and inflation affecting fuel transportation, power plant maintenance and wages. These costs are passed down to consumers, leading to increased household bills — making solar an increasingly smart investment.",
+    a: "A combination of global gas supply issues, rising grid demand from EVs and heat pumps straining infrastructure, and inflation affecting fuel transportation, power plant maintenance and wages. These costs are passed down to consumers, leading to increased household bills...making solar an increasingly smart investment.",
   },
   {
     q: "What happens if I don't take action?",
     a: "A homeowner who doesn't switch to energy-efficient solutions such as solar and battery storage could waste tens of thousands on unnecessary energy costs over the coming years as prices continue to rise.",
-  },
-  {
-    q: "What is the Year One Performance Guarantee?",
-    a: "We guarantee your system will generate at least the amount of energy we quote in its first year. If it falls short, we'll refund the difference. It's our way of ensuring you get the savings you were promised.",
   },
 ];
 
