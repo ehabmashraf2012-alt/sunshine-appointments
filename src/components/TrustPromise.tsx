@@ -37,11 +37,11 @@ const TrustPromise = () => {
           <CollapsibleTrigger asChild>
             <button className="group mx-auto flex w-full max-w-lg flex-col items-center text-center">
               <p className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/70">
-                Your Home. Your Investment.
+                Your Home. Your Largest Asset.
               </p>
               <div className="mt-2 flex items-center gap-3">
                 <h2 className="font-display text-2xl font-bold text-primary-foreground md:text-3xl">
-                  The savings aren't the scary part
+                  Don't put your home at risk
                 </h2>
                 <ChevronDown
                   className={`h-6 w-6 text-primary-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
@@ -50,7 +50,7 @@ const TrustPromise = () => {
             </button>
           </CollapsibleTrigger>
           <p className="mx-auto mt-2 max-w-xl text-center text-sm text-primary-foreground/70">
-            Trusting the wrong team on your roof is.
+            You've heard the horror stories. Installers who vanish. Warranties that don't hold up. Sales reps who disappear once the deposit clears.
           </p>
 
           <CollapsibleContent>
