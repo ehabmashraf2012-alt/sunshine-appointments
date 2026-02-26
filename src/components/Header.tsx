@@ -10,7 +10,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
   return (
     <header className="absolute left-0 right-0 top-0 z-40 px-4 py-3">
       <div className="mx-auto flex max-w-6xl items-center justify-between">
-        <img src={logo} alt="Project Solar" className="h-14 md:h-10 rounded" />
+        <img src={logo} alt="Solar & Battery Scheme" className="h-16 md:h-14 rounded mix-blend-multiply" />
         
         {/* Mobile: phone icon */}
         <a
