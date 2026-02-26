@@ -75,7 +75,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </Button>
 
           <p className="text-sm text-muted-foreground">
-            Free Consultation Includes: Installation Costs - VAT Free Incentives - Savings Potential
+            No obligation - Takes 2 minutes - Quick call back
           </p>
 
           {/* Join social proof */}
