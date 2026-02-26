@@ -38,7 +38,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Fed up of rising costs? We've helped 50,000+ homeowners reduce their monthly bills with solar and storage
+            Concerned about pushy salespeople and lies? Speak to our expert team with confidence.
           </p>
         </motion.div>
 
