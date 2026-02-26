@@ -51,10 +51,10 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           {/* Eligibility criteria — green box */}
           <div className="rounded-2xl border border-primary/20 bg-solar-green-light px-6 py-5 shadow-sm">
             <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
-              Free Solar Quote Requirements:
+              Free Consultation Includes:
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
-              {["Homeowner", "Staying 3+ Years", "£150+ Monthly Bill"].map((prop) => (
+              {["Installation Costs", "VAT Free Incentives", "Savings Potential"].map((prop) => (
                 <div
                   key={prop}
                   className="flex items-center gap-2 text-sm font-medium text-foreground md:text-base"
