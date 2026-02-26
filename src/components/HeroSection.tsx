@@ -32,9 +32,9 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </div>
 
           <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Save Up To{" "}
-            <span className="text-primary">70%</span> On<br />
-            Your Energy Bills
+            The UK's Leading<br />
+            <span className="text-primary">Solar & Battery Storage</span><br />
+            Specialists
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
