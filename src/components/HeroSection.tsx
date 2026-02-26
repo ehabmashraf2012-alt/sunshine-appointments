@@ -80,18 +80,8 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
 
           {/* Join social proof */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <div className="flex -space-x-2">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-background bg-primary/20 text-[10px] font-bold text-primary"
-                >
-                  {["JB", "SD", "MR"][i]}
-                </div>
-              ))}
-            </div>
             <span>
-              Join <strong className="text-foreground">150+ people</strong> this week
+              We're Rated <strong className="text-foreground">'Excellent' ★★★★★ Trustpilot</strong> by 6,200+ verified customers. 4.5 Rating.
             </span>
           </div>
         </motion.div>
