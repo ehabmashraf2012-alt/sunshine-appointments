@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo-desktop.svg";
+import logo from "@/assets/logo-new.png";
 
 interface HeaderProps {
   onOpenForm: () => void;
