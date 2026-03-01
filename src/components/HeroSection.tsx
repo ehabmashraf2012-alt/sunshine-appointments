@@ -33,8 +33,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
 
           <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl">
             The UK's Leading<br />
-            <span className="text-primary">Solar & Battery Storage</span><br />
-            Specialists
+            <span className="text-primary">Solar Installation Team</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
