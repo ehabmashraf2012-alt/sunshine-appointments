@@ -34,21 +34,14 @@ const TrustPromise = () => {
     <section className="bg-primary px-6 py-10 md:px-4 md:py-24">
       <div className="mx-auto max-w-4xl">
         <Collapsible open={open} onOpenChange={setOpen}>
-          <CollapsibleTrigger asChild>
-            <button className="group mx-auto flex w-full max-w-lg flex-col items-center text-center">
-              <p className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/70">
-                Your Home. Your Largest Asset.
-              </p>
-              <div className="mt-2 flex items-center gap-3">
-                <h2 className="font-display text-2xl font-bold text-primary-foreground md:text-3xl">
-                  Don't put your home at risk
-                </h2>
-                <ChevronDown
-                  className={`h-6 w-6 text-primary-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
-                />
-              </div>
-            </button>
-          </CollapsibleTrigger>
+          <div className="mx-auto flex w-full max-w-lg flex-col items-center text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/70">
+              Your Home. Your Largest Asset.
+            </p>
+            <h2 className="mt-2 font-display text-2xl font-bold text-primary-foreground md:text-3xl">
+              Don't put your home at risk
+            </h2>
+          </div>
           <p className="mx-auto mt-2 max-w-xl text-center text-sm text-primary-foreground/70">
             You've heard the horror stories. Installers who vanish. Warranties that don't hold up. Sales reps who disappear once the deposit clears.
           </p>
@@ -95,6 +88,17 @@ const TrustPromise = () => {
               </div>
             </motion.div>
           </CollapsibleContent>
+
+          <CollapsibleTrigger asChild>
+            <button className="group mx-auto mt-6 flex flex-col items-center gap-1">
+              <p className="text-xs font-medium uppercase tracking-wider text-primary-foreground/60">
+                {open ? "Close" : "What makes us different"}
+              </p>
+              <ChevronDown
+                className={`h-5 w-5 text-primary-foreground/60 transition-transform duration-300 ${open ? "rotate-180" : "animate-bounce"}`}
+              />
+            </button>
+          </CollapsibleTrigger>
         </Collapsible>
       </div>
     </section>
