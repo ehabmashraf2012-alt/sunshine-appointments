@@ -92,7 +92,7 @@ const TrustPromise = () => {
           <CollapsibleTrigger asChild>
             <button className="group mx-auto mt-6 flex flex-col items-center gap-1">
               <p className="text-xs font-medium uppercase tracking-wider text-primary-foreground/60">
-                {open ? "Close" : "What makes us different"}
+                {open ? "Close" : "What makes us different..."}
               </p>
               <ChevronDown
                 className={`h-5 w-5 text-primary-foreground/60 transition-transform duration-300 ${open ? "rotate-180" : "animate-bounce"}`}
