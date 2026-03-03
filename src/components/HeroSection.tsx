@@ -1,7 +1,6 @@
 import { CheckCircle, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-installers.png";
 
 interface HeroSectionProps {
   onOpenForm: () => void;
@@ -9,16 +8,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
   return (
-    <section className="relative overflow-hidden bg-background px-4 pb-12 pt-28 md:pt-40 md:pb-28">
-      {/* Background image with overlay */}
-      <div className="pointer-events-none absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Solar panel installation"
-          className="h-full w-full object-cover opacity-[0.30]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
-      </div>
+    <section className="relative overflow-hidden bg-solar-warm px-4 pb-12 pt-28 md:pt-40 md:pb-28">
 
       <div className="relative mx-auto max-w-4xl text-center">
         <motion.div
