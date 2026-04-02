@@ -253,7 +253,7 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
 
               {step === 6 && (
                 <div>
-                  <h4 className="font-display text-xl font-bold text-foreground">Almost there — how can we reach you?</h4>
+                  <h4 className="font-display text-xl font-bold text-foreground">Almost there. How can we reach you?</h4>
                   <p className="mt-2 text-sm text-muted-foreground">
                     We'll have a specialist call you shortly with your personalised savings estimate.
                   </p>
