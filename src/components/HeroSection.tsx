@@ -21,10 +21,10 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           <div className="flex flex-col items-center gap-1 text-center">
             <div className="flex items-center gap-1.5 text-sm font-bold text-destructive">
               <Flame className="h-4 w-4" />
-              Limited Consultation Slots Available This Month
+              Demand Is Surging — Limited Slots Available
             </div>
             <p className="text-xs text-muted-foreground">
-              0% VAT on solar installation ends <strong className="text-foreground">31 March 2027</strong>. Act before slots fill up and prices rise.
+              Don't miss your chance to speak to our experts while they have availability. Slots are filling up fast.
             </p>
           </div>
         </motion.div>
@@ -78,7 +78,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
             size="lg"
             className="mt-2 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
           >
-            Request Your Invitation
+            Request Your Consultation
           </Button>
 
           <div className="flex items-center gap-2 text-xs text-muted-foreground">

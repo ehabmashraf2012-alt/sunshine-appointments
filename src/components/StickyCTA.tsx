@@ -35,7 +35,7 @@ const StickyCTA = ({ onOpenForm }: StickyCTAProps) => {
                 onClick={onOpenForm}
                 className="rounded-full font-semibold shadow-md shadow-primary/20"
               >
-                Request Your Invitation
+                Request Your Consultation
               </Button>
             </div>
           </motion.div>
@@ -53,7 +53,7 @@ const StickyCTA = ({ onOpenForm }: StickyCTAProps) => {
                 onClick={onOpenForm}
                 className="w-full max-w-sm rounded-full font-semibold shadow-md shadow-primary/20"
               >
-                Request Your Invitation
+                Request Your Consultation
               </Button>
             </div>
           </motion.div>

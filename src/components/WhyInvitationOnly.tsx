@@ -100,7 +100,7 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
                   size="lg"
                   className="mt-6 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg"
                 >
-                  Request Your Invitation
+                  Request Your Consultation
                 </Button>
               </div>
             </motion.div>
