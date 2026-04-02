@@ -34,7 +34,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
             onClick={onOpenForm}
             className="rounded-full font-semibold shadow-md shadow-primary/20"
           >
-            Request Your Invitation
+            Request Your Consultation
           </Button>
         </div>
       </div>

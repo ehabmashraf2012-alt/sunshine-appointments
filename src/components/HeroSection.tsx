@@ -21,10 +21,10 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           <div className="flex flex-col items-center gap-1 text-center">
             <div className="flex items-center gap-1.5 text-sm font-bold text-destructive">
               <Flame className="h-4 w-4" />
-              Limited Consultation Slots Available This Month
+              Demand Is Surging — Limited Slots Available
             </div>
             <p className="text-xs text-muted-foreground">
-              0% VAT on solar installation ends <strong className="text-foreground">31 March 2027</strong>. Act before slots fill up and prices rise.
+              Don't miss your chance to speak to our experts while they have availability. Slots are filling up fast.
             </p>
           </div>
         </motion.div>
@@ -40,12 +40,12 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </div>
 
           <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            The UK's Leading<br />
-            <span className="text-primary">Solar Installation Team</span>
+            Save Up to 70% on<br />
+            <span className="text-primary">Your Energy Bills</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Concerned about pushy salespeople and lies? Speak to our expert team with confidence. No hard sales tactics, ever.
+            Fed up of rising costs? It's time to take control with the UK's leading solar installer.
           </p>
         </motion.div>
 
@@ -78,7 +78,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
             size="lg"
             className="mt-2 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
           >
-            Request Your Invitation
+            Request Your Consultation
           </Button>
 
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
