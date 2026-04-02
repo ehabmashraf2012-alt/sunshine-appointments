@@ -24,7 +24,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
               Limited Consultation Slots Available This Month
             </div>
             <p className="text-xs text-muted-foreground">
-              0% VAT on solar installation ends <strong className="text-foreground">31 March 2027</strong> — act before slots fill up and prices rise.
+              0% VAT on solar installation ends <strong className="text-foreground">31 March 2027</strong>. Act before slots fill up and prices rise.
             </p>
           </div>
         </motion.div>
