@@ -85,7 +85,7 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
               </div>
 
               {/* FOMO + CTA */}
-              <div className="mt-10 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 text-center md:p-8">
+              <div className="mt-10 rounded-2xl bg-primary-foreground p-6 text-center shadow-sm md:p-8">
                 <div className="flex items-center justify-center gap-2">
                   <Users className="h-5 w-5 text-primary-foreground" />
                   <p className="text-lg font-bold text-primary-foreground md:text-xl">
