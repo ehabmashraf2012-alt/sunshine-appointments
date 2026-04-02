@@ -32,7 +32,7 @@ const Index = () => {
       <FAQSection />
       <WhyChooseUs />
       {/* <HowItWorks /> */}
-      <AuthorityTrust />
+      {/* <AuthorityTrust /> */}
       <FinalCTA onOpenForm={openForm} />
       <EligibilityForm open={formOpen} onClose={() => setFormOpen(false)} />
     </div>
