@@ -69,7 +69,7 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: i * 0.1 }}
-                    className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 text-left"
+                    className="rounded-2xl bg-primary-foreground p-6 text-left shadow-sm"
                   >
                     <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary-foreground/10">
                       <item.icon className="h-5 w-5 text-primary-foreground" />
