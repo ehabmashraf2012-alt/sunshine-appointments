@@ -45,7 +45,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Concerned about pushy salespeople and lies? Speak to our expert team with confidence. No hard sales tactics — ever.
+            Concerned about pushy salespeople and lies? Speak to our expert team with confidence. No hard sales tactics, ever.
           </p>
         </motion.div>
 
