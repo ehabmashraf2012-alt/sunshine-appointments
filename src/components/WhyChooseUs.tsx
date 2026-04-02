@@ -24,7 +24,7 @@ const usps = [
   {
     icon: Handshake,
     title: "Flexible Payments",
-    description: "Making solar accessible with several payment options — cash, finance, or leasing.",
+    description: "Making solar accessible with several payment options: cash, finance, or leasing.",
   },
 ];
 

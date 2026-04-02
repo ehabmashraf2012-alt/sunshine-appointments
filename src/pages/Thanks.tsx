@@ -48,7 +48,7 @@ const Thanks = () => {
             <li className="flex items-start gap-3">
               <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-solar-green-light text-sm font-bold text-primary">1</div>
               <div>
-                <p className="font-semibold text-foreground">Expert Call — Answer Promptly</p>
+                <p className="font-semibold text-foreground">Expert Call: Answer Promptly</p>
                 <p className="text-sm text-muted-foreground">A solar specialist will call to discuss your personalised savings. Don't miss it.</p>
               </div>
             </li>

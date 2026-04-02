@@ -55,7 +55,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 flex flex-col items-center gap-6"
         >
-          {/* Eligibility criteria — green box */}
+          {/* Eligibility criteria green box */}
           <div className="rounded-2xl border border-primary/20 bg-solar-green-light px-6 py-5 shadow-sm">
             <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
               Your Invitation-Only Consultation Includes:

@@ -261,7 +261,7 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
                     <div className="flex items-start gap-2">
                       <Phone className="mt-0.5 h-4 w-4 shrink-0 text-solar-gold" />
                       <p className="text-xs leading-relaxed text-foreground">
-                        <strong>Important:</strong> Due to high demand, our specialist may only be able to attempt one call. Please answer promptly — it's the only way to receive your full savings estimate and confirm eligibility.
+                        <strong>Important:</strong> Due to high demand, our specialist may only be able to attempt one call. Please answer promptly. It's the only way to receive your full savings estimate and confirm eligibility.
                       </p>
                     </div>
                   </div>

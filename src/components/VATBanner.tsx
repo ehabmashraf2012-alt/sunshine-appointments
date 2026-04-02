@@ -25,7 +25,7 @@ const VATBanner = ({ onOpenForm }: VATBannerProps) => {
               0% VAT ends 31 March 2027. Don't wait until prices rise.
             </h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              The 0% VAT on solar panels is temporary and could change at any moment. From 1 April 2027, installation costs will increase. Limited consultation slots are available this month — secure yours now.
+              The 0% VAT on solar panels is temporary and could change at any moment. From 1 April 2027, installation costs will increase. Limited consultation slots are available this month. Secure yours now.
             </p>
           </div>
           <Button
