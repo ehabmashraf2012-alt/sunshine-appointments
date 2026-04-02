@@ -98,8 +98,7 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
                 <Button
                   onClick={onOpenForm}
                   size="lg"
-                  variant="secondary"
-                  className="mt-6 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg"
+                  className="mt-6 h-14 rounded-xl bg-primary-foreground px-10 text-lg font-semibold text-primary shadow-lg hover:bg-primary-foreground/90"
                 >
                   Request Your Invitation
                 </Button>
