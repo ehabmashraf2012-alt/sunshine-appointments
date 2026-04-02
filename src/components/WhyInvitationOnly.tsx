@@ -46,7 +46,7 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
           className="mt-8 inline-flex flex-col items-center gap-1 text-primary-foreground/60 transition-colors hover:text-primary-foreground/90"
         >
           <span className="text-xs font-semibold uppercase tracking-widest">
-            {isOpen ? "CLOSE" : "WHAT MAKES US DIFFERENT..."}
+            {isOpen ? "CLOSE" : "FIND OUT WHY..."}
           </span>
           <ChevronDown
             className={`h-5 w-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
