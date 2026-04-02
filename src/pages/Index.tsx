@@ -14,6 +14,7 @@ import TrustPromise from "@/components/TrustPromise";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import EligibilityForm from "@/components/EligibilityForm";
+import WhyInvitationOnly from "@/components/WhyInvitationOnly";
 
 const Index = () => {
   const [formOpen, setFormOpen] = useState(false);
@@ -25,6 +26,7 @@ const Index = () => {
       <StickyCTA onOpenForm={openForm} />
       <HeroSection onOpenForm={openForm} />
       <Testimonials />
+      <WhyInvitationOnly onOpenForm={openForm} />
       <EligibilitySavings onOpenForm={openForm} />
       <TrustPromise />
       <PricingSection />
