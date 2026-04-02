@@ -36,7 +36,7 @@ const Thanks = () => {
             <div>
               <p className="font-semibold text-foreground">Please keep your phone nearby</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                A specialist will call you shortly with your personalised savings estimate. Due to high demand, there may only be <strong className="text-foreground">one call attempt</strong> — answering is the only way to receive your full estimate and confirm eligibility.
+                A specialist will call you shortly with your personalised savings estimate. Due to high demand, there may only be <strong className="text-foreground">one call attempt</strong>. Answering is the only way to receive your full estimate and confirm eligibility.
               </p>
             </div>
           </div>
