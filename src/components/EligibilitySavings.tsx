@@ -1,4 +1,4 @@
-import { Home, Sun, Battery, PiggyBank } from "lucide-react";
+import { Home, Sun, Battery, PiggyBank, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import kevinHomeowner from "@/assets/kevin-homeowner.webp";
@@ -12,11 +12,15 @@ const EligibilitySavings = ({ onOpenForm }: EligibilitySavingsProps) => {
     <section className="bg-background px-4 py-10 md:py-24">
       <div className="mx-auto max-w-5xl">
         <div className="text-center">
+          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-solar-green-light px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+            <ShieldAlert className="h-3.5 w-3.5" />
+            Exclusive Opportunity
+          </div>
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
             Could You Save Up to 70%?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Do the following apply to you? If so start your journey to saving on your energy today.
+            This offer is exclusively for homeowners who meet all criteria below. Check if you qualify before slots fill up.
           </p>
         </div>
 
@@ -40,10 +44,10 @@ const EligibilitySavings = ({ onOpenForm }: EligibilitySavingsProps) => {
           <div>
             <div className="space-y-4">
               {[
-                { icon: Home, label: "Own your home", detail: "Must own your primary residence" },
-                { icon: Sun, label: "Staying 3+ years", detail: "Planning to stay in the property" },
-                { icon: Battery, label: "£150+ monthly bill", detail: "High energy usage profiles qualify" },
-                { icon: PiggyBank, label: "Want to save", detail: "On electricity bills long-term" },
+                { icon: Home, label: "You own your home", detail: "This offer is only available to homeowners" },
+                { icon: Sun, label: "You're staying 3+ years", detail: "Planning to stay and enjoy the long-term savings" },
+                { icon: Battery, label: "Your bills exceed £150/month", detail: "Higher bills mean bigger savings potential" },
+                { icon: PiggyBank, label: "You want to cut energy costs", detail: "Join thousands already saving up to 70%" },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}
@@ -69,8 +73,11 @@ const EligibilitySavings = ({ onOpenForm }: EligibilitySavingsProps) => {
               size="lg"
               className="mt-8 h-14 w-full rounded-xl text-lg font-semibold shadow-lg shadow-primary/25"
             >
-              Free Solar Consultation
+              Check Your Eligibility
             </Button>
+            <p className="mt-2 text-center text-xs text-muted-foreground">
+              Due to high demand, we can only hold your slot briefly
+            </p>
           </div>
         </div>
       </div>
