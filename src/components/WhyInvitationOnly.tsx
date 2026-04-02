@@ -69,15 +69,15 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: i * 0.1 }}
-                    className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 text-left"
+                    className="rounded-2xl bg-primary-foreground p-6 text-left shadow-sm"
                   >
-                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary-foreground/10">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary">
                       <item.icon className="h-5 w-5 text-primary-foreground" />
                     </div>
-                    <h3 className="font-display text-base font-bold text-primary-foreground">
+                    <h3 className="font-display text-base font-bold text-foreground">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       {item.text}
                     </p>
                   </motion.div>
@@ -98,8 +98,7 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
                 <Button
                   onClick={onOpenForm}
                   size="lg"
-                  variant="secondary"
-                  className="mt-6 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg"
+                  className="mt-6 h-14 rounded-xl bg-primary-foreground px-10 text-lg font-semibold text-primary shadow-lg hover:bg-primary-foreground/90"
                 >
                   Request Your Invitation
                 </Button>
