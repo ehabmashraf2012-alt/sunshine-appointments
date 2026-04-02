@@ -40,12 +40,12 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </div>
 
           <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            The UK's Leading<br />
-            <span className="text-primary">Solar Installation Team</span>
+            Save Up to 70% on<br />
+            <span className="text-primary">Your Energy Bills</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Concerned about pushy salespeople and lies? Speak to our expert team with confidence. No hard sales tactics, ever.
+            Fed up of rising costs? It's time to take control with the UK's leading solar installer.
           </p>
         </motion.div>
 
