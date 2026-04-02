@@ -36,7 +36,7 @@ const Thanks = () => {
             <div>
               <p className="font-semibold text-foreground">Please keep your phone nearby</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                A specialist will call you shortly with your personalised savings estimate. Due to high demand, there may only be <strong className="text-foreground">one call attempt</strong> — answering is the only way to receive your full estimate and confirm eligibility.
+                A specialist will call you shortly with your personalised savings estimate. Due to high demand, there may only be <strong className="text-foreground">one call attempt</strong>. Answering is the only way to receive your full estimate and confirm eligibility.
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const Thanks = () => {
             <li className="flex items-start gap-3">
               <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-solar-green-light text-sm font-bold text-primary">1</div>
               <div>
-                <p className="font-semibold text-foreground">Expert Call — Answer Promptly</p>
+                <p className="font-semibold text-foreground">Expert Call: Answer Promptly</p>
                 <p className="text-sm text-muted-foreground">A solar specialist will call to discuss your personalised savings. Don't miss it.</p>
               </div>
             </li>

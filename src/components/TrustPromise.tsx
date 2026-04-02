@@ -13,7 +13,7 @@ const painPoints = [
   {
     icon: Headset,
     problem: "Sales reps and installers that vanish.",
-    solution: "50,000+ certified installations across the UK — we're not going anywhere.",
+    solution: "50,000+ certified installations across the UK. We're not going anywhere.",
   },
   {
     icon: FileCheck,

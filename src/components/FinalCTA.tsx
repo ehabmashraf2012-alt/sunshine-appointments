@@ -28,7 +28,7 @@ const FinalCTA = ({ onOpenForm }: FinalCTAProps) => {
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/80">
           Join 50,000+ homeowners already saving up to 70% on their energy bills.
-          Consultation slots are limited — check your eligibility now before they're gone.
+          Consultation slots are limited. Check your eligibility now before they're gone.
         </p>
 
         <Button
