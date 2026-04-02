@@ -1,4 +1,4 @@
-import { CheckCircle, Trophy } from "lucide-react";
+import { CheckCircle, Trophy, Clock, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -11,6 +11,24 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
     <section className="relative overflow-hidden bg-solar-warm px-4 pb-12 pt-28 md:pt-40 md:pb-28">
 
       <div className="relative mx-auto max-w-4xl text-center">
+        {/* Urgency banner */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto mb-6 max-w-xl rounded-xl border border-destructive/30 bg-destructive/5 px-4 py-3"
+        >
+          <div className="flex flex-col items-center gap-1 text-center">
+            <div className="flex items-center gap-1.5 text-sm font-bold text-destructive">
+              <Flame className="h-4 w-4" />
+              Limited Consultation Slots Available This Month
+            </div>
+            <p className="text-xs text-muted-foreground">
+              0% VAT on solar installation ends <strong className="text-foreground">31 March 2027</strong> — act before slots fill up and prices rise.
+            </p>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +45,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Concerned about pushy salespeople and lies? Speak to our expert team with confidence.
+            Concerned about pushy salespeople and lies? Speak to our expert team with confidence. No hard sales tactics — ever.
           </p>
         </motion.div>
 
@@ -40,7 +58,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           {/* Eligibility criteria — green box */}
           <div className="rounded-2xl border border-primary/20 bg-solar-green-light px-6 py-5 shadow-sm">
             <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
-              Free Consultation Includes:
+              Your Invitation-Only Consultation Includes:
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
               {["Installation Costs", "VAT Free Incentives", "Savings Potential"].map((prop) => (
@@ -60,17 +78,18 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
             size="lg"
             className="mt-2 h-14 rounded-xl px-10 text-lg font-semibold shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
           >
-            Free Solar Consultation
+            Request Your Invitation
           </Button>
 
-          <p className="text-sm text-muted-foreground">
-            No obligation - Takes 2 minutes - Quick call back
-          </p>
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Clock className="h-3.5 w-3.5" />
+            <span>This month only · Seats filling fast · Takes 2 minutes</span>
+          </div>
 
           {/* Join social proof */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>
-              We're Rated <strong className="text-foreground">'Excellent' ★★★★★ Trustpilot</strong> by 6,200+ verified customers. 4.5 Rating.
+              Join the thousands already saving up to 70%. Rated <strong className="text-foreground">'Excellent' ★★★★★ Trustpilot</strong> by 6,200+ verified customers.
             </span>
           </div>
         </motion.div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Star, ArrowLeft, Home, Building, Building2, Warehouse, Hotel, Check } from "lucide-react";
+import { X, Star, ArrowLeft, Home, Building, Building2, Warehouse, Hotel, Check, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -67,9 +67,7 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
 
   const validateUKPhone = (phone: string): boolean => {
     const cleaned = phone.replace(/[\s\-()]/g, "");
-    // UK mobile: 07xxx or +447xxx (11 digits starting 07, or 12/13 with +44/0044)
     const ukMobile = /^(\+44|0044)?0?7\d{9}$/;
-    // UK landline: 01/02/03
     const ukLandline = /^(\+44|0044)?0?[1-3]\d{8,9}$/;
     return ukMobile.test(cleaned) || ukLandline.test(cleaned);
   };
@@ -106,7 +104,6 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
 
   if (!open) return null;
 
-  // Non-homeowner dead-end step
   const isNonHomeowner = step === 3 && data.homeowner === "no";
 
   return (
@@ -132,7 +129,7 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
               </button>
             )}
             <h3 className="font-display text-lg font-bold text-foreground">
-              Free Eligibility Check
+              Eligibility Check
             </h3>
           </div>
           <button onClick={handleClose} className="rounded-lg p-1 text-muted-foreground hover:text-foreground">
@@ -256,9 +253,19 @@ const EligibilityForm = ({ open, onClose }: EligibilityFormProps) => {
 
               {step === 6 && (
                 <div>
-                  <h4 className="font-display text-xl font-bold text-foreground">How can we reach you?</h4>
-                  <p className="mt-2 text-sm text-muted-foreground">We'll send your eligibility results and next steps.</p>
-                  <div className="mt-6 space-y-4">
+                  <h4 className="font-display text-xl font-bold text-foreground">Almost there — how can we reach you?</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    We'll have a specialist call you shortly with your personalised savings estimate.
+                  </p>
+                  <div className="mt-4 rounded-lg border border-solar-gold/30 bg-solar-gold/10 p-3">
+                    <div className="flex items-start gap-2">
+                      <Phone className="mt-0.5 h-4 w-4 shrink-0 text-solar-gold" />
+                      <p className="text-xs leading-relaxed text-foreground">
+                        <strong>Important:</strong> Due to high demand, our specialist may only be able to attempt one call. Please answer promptly — it's the only way to receive your full savings estimate and confirm eligibility.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4 space-y-4">
                     <div>
                       <Label htmlFor="email">Email address</Label>
                       <Input id="email" type="email" value={data.email} onChange={(e) => { setData({ ...data, email: e.target.value }); setErrors({ ...errors, email: "" }); }} className={`mt-1 h-12 rounded-xl ${errors.email ? "border-destructive" : ""}`} placeholder="john@example.com" />

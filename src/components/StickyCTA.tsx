@@ -29,12 +29,13 @@ const StickyCTA = ({ onOpenForm }: StickyCTAProps) => {
             transition={{ duration: 0.3 }}
             className="fixed left-0 right-0 top-0 z-50 hidden border-b border-border bg-background/95 backdrop-blur-md md:block"
           >
-            <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-3">
+            <div className="mx-auto flex max-w-6xl items-center justify-center gap-3 px-4 py-3">
+              <span className="text-xs font-medium text-muted-foreground">Limited slots this month</span>
               <Button
                 onClick={onOpenForm}
                 className="rounded-full font-semibold shadow-md shadow-primary/20"
               >
-                Free Solar Consultation
+                Request Your Invitation
               </Button>
             </div>
           </motion.div>
@@ -52,7 +53,7 @@ const StickyCTA = ({ onOpenForm }: StickyCTAProps) => {
                 onClick={onOpenForm}
                 className="w-full max-w-sm rounded-full font-semibold shadow-md shadow-primary/20"
               >
-                Free Solar Consultation
+                Request Your Invitation
               </Button>
             </div>
           </motion.div>

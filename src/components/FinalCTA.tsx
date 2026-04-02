@@ -24,11 +24,11 @@ const FinalCTA = ({ onOpenForm }: FinalCTAProps) => {
         className="relative mx-auto max-w-3xl text-center"
       >
         <h2 className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
-          Ready to Start Saving?
+          Don't Let Rising Bills Cost You Thousands
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/80">
-          Join 5,700+ families already saving up to 70% on their energy bills.
-          Check your eligibility now.
+          Join 50,000+ homeowners already saving up to 70% on their energy bills.
+          Consultation slots are limited — check your eligibility now before they're gone.
         </p>
 
         <Button
@@ -37,12 +37,12 @@ const FinalCTA = ({ onOpenForm }: FinalCTAProps) => {
           variant="secondary"
           className="mt-8 h-14 rounded-xl px-10 text-lg font-semibold text-primary shadow-lg transition-all hover:scale-[1.02]"
         >
-          Free Solar Consultation
+          Request Your Invitation
         </Button>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
           {[
-            { icon: Shield, text: "No obligation" },
+            { icon: Shield, text: "No obligation · No hard sales" },
             { icon: Clock, text: "Takes 2 minutes" },
             { icon: CheckCircle, text: "Free home survey" },
           ].map((item) => (

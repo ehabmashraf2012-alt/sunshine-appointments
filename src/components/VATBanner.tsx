@@ -1,4 +1,4 @@
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
@@ -22,17 +22,17 @@ const VATBanner = ({ onOpenForm }: VATBannerProps) => {
           </div>
           <div className="flex-1">
             <h3 className="font-display text-lg font-bold text-foreground">
-              Don't miss 0% VAT on installation for a limited time only!
+              0% VAT ends 31 March 2027 — don't wait until prices rise
             </h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              The 0% VAT on solar panels is a temporary measure, currently set to last until <strong className="text-foreground">31 March 2027</strong> but this could change at any moment. From 1 April 2027, the VAT rate will return and the cost of your installation will increase.
+              The 0% VAT on solar panels is temporary and could change at any moment. From 1 April 2027, installation costs will increase. Limited consultation slots are available this month — secure yours now.
             </p>
           </div>
           <Button
             onClick={onOpenForm}
             className="flex-shrink-0 rounded-xl font-semibold shadow-md shadow-primary/20"
           >
-            Act Now
+            Secure Your Slot
           </Button>
         </div>
       </div>

@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     q: "How do I get started?",
-    a: "Complete our free quote form and a solar expert will be in touch to give you an initial insight into how much you could save on your annual electricity bills and the potential cost of solar and battery storage installation.",
+    a: "Complete our free eligibility check and a solar expert will be in touch to give you an initial insight into how much you could save on your annual electricity bills and the potential cost of solar and battery storage installation. Slots are limited each month, so we recommend acting quickly.",
   },
   {
     q: "What will my solar installation journey look like?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "What happens if I don't take action?",
-    a: "A homeowner who doesn't switch to energy-efficient solutions such as solar and battery storage could waste tens of thousands on unnecessary energy costs over the coming years as prices continue to rise.",
+    a: "A homeowner who doesn't switch to energy-efficient solutions such as solar and battery storage could waste tens of thousands on unnecessary energy costs over the coming years as prices continue to rise. With the 0% VAT incentive ending on 31 March 2027, delaying could also mean paying significantly more for your installation. Every month you wait is money lost.",
   },
 ];
 
