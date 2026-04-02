@@ -71,13 +71,13 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
                     transition={{ duration: 0.4, delay: i * 0.1 }}
                     className="rounded-2xl bg-primary-foreground p-6 text-left shadow-sm"
                   >
-                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary-foreground/10">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary">
                       <item.icon className="h-5 w-5 text-primary-foreground" />
                     </div>
-                    <h3 className="font-display text-base font-bold text-primary-foreground">
+                    <h3 className="font-display text-base font-bold text-foreground">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       {item.text}
                     </p>
                   </motion.div>
