@@ -87,12 +87,12 @@ const WhyInvitationOnly = ({ onOpenForm }: WhyInvitationOnlyProps) => {
               {/* FOMO + CTA */}
               <div className="mt-10 rounded-2xl bg-primary-foreground p-6 text-center shadow-sm md:p-8">
                 <div className="flex items-center justify-center gap-2">
-                  <Users className="h-5 w-5 text-primary-foreground" />
-                  <p className="text-lg font-bold text-primary-foreground md:text-xl">
+                  <Users className="h-5 w-5 text-primary" />
+                  <p className="text-lg font-bold text-foreground md:text-xl">
                     Join 50,000+ homeowners already saving up to 70%.
                   </p>
                 </div>
-                <p className="mx-auto mt-2 max-w-lg text-sm text-primary-foreground/70">
+                <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground">
                   Homeowners who don't act could waste tens of thousands on rising energy costs over the coming years. Don't be one of them.
                 </p>
                 <Button
