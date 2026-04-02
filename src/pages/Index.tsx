@@ -31,7 +31,7 @@ const Index = () => {
       <VATBanner onOpenForm={openForm} />
       <FAQSection />
       <WhyChooseUs />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <AuthorityTrust />
       <FinalCTA onOpenForm={openForm} />
       <EligibilityForm open={formOpen} onClose={() => setFormOpen(false)} />
