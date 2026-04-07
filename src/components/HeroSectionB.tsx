@@ -28,11 +28,11 @@ const HeroSectionB = ({ onOpenForm }: HeroSectionBProps) => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-solar-gold/30 bg-solar-gold/10 px-4 py-2 text-sm font-semibold text-solar-gold"
         >
           <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-solar-gold opacity-75" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-solar-gold" />
           </span>
           Limited Consultations Available This Month
         </motion.div>
