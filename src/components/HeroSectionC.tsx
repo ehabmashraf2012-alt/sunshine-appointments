@@ -48,7 +48,7 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
                 </h1>
 
                 <p className="mx-auto mt-5 max-w-md text-base text-muted-foreground md:text-lg lg:mx-0">
-                  No hard sell. No pressure. Just honest advice from the UK's most trusted solar installer.
+                  Fed up of rising costs? It's time to take control with the UK's leading solar installer.
                 </p>
               </motion.div>
 
