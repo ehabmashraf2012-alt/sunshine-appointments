@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
 import HeroSectionB from "@/components/HeroSectionB";
 import FeaturedIn from "@/components/FeaturedIn";
 import StickyCTA from "@/components/StickyCTA";
@@ -16,6 +17,9 @@ import FinalCTA from "@/components/FinalCTA";
 import EligibilityForm from "@/components/EligibilityForm";
 import WhyInvitationOnly from "@/components/WhyInvitationOnly";
 
+// 🔀 Switch hero variant here: "A" or "B"
+const HERO_VARIANT: "A" | "B" = "A";
+
 const Index = () => {
   const [formOpen, setFormOpen] = useState(false);
   const openForm = () => setFormOpen(true);
@@ -24,9 +28,7 @@ const Index = () => {
     <div className="pb-16 md:pb-0">
       <Header onOpenForm={openForm} />
       <StickyCTA onOpenForm={openForm} />
-      {/* Variant A: <HeroSection onOpenForm={openForm} /> */}
-      {/* Variant B: */}
-      <HeroSectionB onOpenForm={openForm} />
+      {HERO_VARIANT === "A" ? <HeroSection onOpenForm={openForm} /> : <HeroSectionB onOpenForm={openForm} />}
       <Testimonials />
       <WhyInvitationOnly onOpenForm={openForm} />
       <EligibilitySavings onOpenForm={openForm} />
