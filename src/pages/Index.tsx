@@ -17,18 +17,23 @@ import FinalCTA from "@/components/FinalCTA";
 import EligibilityForm from "@/components/EligibilityForm";
 import WhyInvitationOnly from "@/components/WhyInvitationOnly";
 
-// 🔀 Switch hero variant here: "A" or "B"
-const HERO_VARIANT: "A" | "B" = "A";
-
 const Index = () => {
   const [formOpen, setFormOpen] = useState(false);
+  const [heroVariant, setHeroVariant] = useState<"A" | "B">("A");
   const openForm = () => setFormOpen(true);
 
   return (
     <div className="pb-16 md:pb-0">
+      {/* Variant switcher */}
+      <button
+        onClick={() => setHeroVariant(heroVariant === "A" ? "B" : "A")}
+        className="fixed right-4 top-4 z-50 rounded-full bg-destructive px-4 py-2 text-sm font-bold text-white shadow-lg"
+      >
+        Hero: {heroVariant} → {heroVariant === "A" ? "B" : "A"}
+      </button>
       <Header onOpenForm={openForm} />
       <StickyCTA onOpenForm={openForm} />
-      {HERO_VARIANT === "A" ? <HeroSection onOpenForm={openForm} /> : <HeroSectionB onOpenForm={openForm} />}
+      {heroVariant === "A" ? <HeroSection onOpenForm={openForm} /> : <HeroSectionB onOpenForm={openForm} />}
       <Testimonials />
       <WhyInvitationOnly onOpenForm={openForm} />
       <EligibilitySavings onOpenForm={openForm} />
