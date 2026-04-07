@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
+import HeaderB from "@/components/HeaderB";
 import HeroSection from "@/components/HeroSection";
 import FeaturedIn from "@/components/FeaturedIn";
 import StickyCTA from "@/components/StickyCTA";
