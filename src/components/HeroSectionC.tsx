@@ -9,23 +9,8 @@ interface HeroSectionCProps {
 const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
   return (
     <section className="relative overflow-hidden">
-      {/* Urgency strip */}
-      <div className="bg-foreground px-4 py-2.5 text-center">
-        <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-medium text-primary-foreground/80 sm:text-sm">
-          <span className="flex items-center gap-1.5 text-solar-gold">
-            <Flame className="h-3.5 w-3.5" />
-            Limited Slots This Month
-          </span>
-          <span className="hidden h-3 w-px bg-primary-foreground/20 sm:block" />
-          <span className="flex items-center gap-1.5">
-            <Clock className="h-3.5 w-3.5 text-primary-foreground/50" />
-            0% VAT on solar ends 31 March 2027
-          </span>
-        </div>
-      </div>
-
       {/* Hero body */}
-      <div className="relative bg-gradient-to-b from-[hsl(45,50%,95%)] to-solar-warm px-4 pb-14 pt-24 md:pt-36 md:pb-24">
+      <div className="relative bg-gradient-to-b from-[hsl(45,50%,95%)] to-solar-warm px-4 pb-14 pt-28 md:pt-36 md:pb-24">
         {/* Decorative circles */}
         <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
         <div className="pointer-events-none absolute -left-20 bottom-0 h-60 w-60 rounded-full bg-solar-gold/10 blur-3xl" />
