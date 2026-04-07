@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HeroSectionB from "@/components/HeroSectionB";
+import HeroSectionC from "@/components/HeroSectionC";
 import FeaturedIn from "@/components/FeaturedIn";
 import StickyCTA from "@/components/StickyCTA";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -19,21 +20,24 @@ import WhyInvitationOnly from "@/components/WhyInvitationOnly";
 
 const Index = () => {
   const [formOpen, setFormOpen] = useState(false);
-  const [heroVariant, setHeroVariant] = useState<"A" | "B">("A");
+  const [heroVariant, setHeroVariant] = useState<"A" | "B" | "C">("A");
   const openForm = () => setFormOpen(true);
+  const nextVariant = () => setHeroVariant(v => v === "A" ? "B" : v === "B" ? "C" : "A");
 
   return (
     <div className="pb-16 md:pb-0">
       {/* Variant switcher */}
       <button
-        onClick={() => setHeroVariant(heroVariant === "A" ? "B" : "A")}
+        onClick={nextVariant}
         className="fixed right-4 top-4 z-50 rounded-full bg-destructive px-4 py-2 text-sm font-bold text-white shadow-lg"
       >
-        Hero: {heroVariant} → {heroVariant === "A" ? "B" : "A"}
+        Hero: {heroVariant}
       </button>
       <Header onOpenForm={openForm} />
       <StickyCTA onOpenForm={openForm} />
-      {heroVariant === "A" ? <HeroSection onOpenForm={openForm} /> : <HeroSectionB onOpenForm={openForm} />}
+      {heroVariant === "A" && <HeroSection onOpenForm={openForm} />}
+      {heroVariant === "B" && <HeroSectionB onOpenForm={openForm} />}
+      {heroVariant === "C" && <HeroSectionC onOpenForm={openForm} />}
       <Testimonials />
       <WhyInvitationOnly onOpenForm={openForm} />
       <EligibilitySavings onOpenForm={openForm} />
