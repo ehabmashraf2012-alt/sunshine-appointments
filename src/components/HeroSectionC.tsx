@@ -25,6 +25,11 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
+                <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-destructive/20 bg-destructive/5 px-3.5 py-1.5 text-xs font-bold text-destructive">
+                  <Flame className="h-3.5 w-3.5" />
+                  Limited Slots This Month — Seats Filling Fast
+                </div>
+                <br />
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
                   <Shield className="h-3.5 w-3.5" />
                   50,000+ Systems Installed
