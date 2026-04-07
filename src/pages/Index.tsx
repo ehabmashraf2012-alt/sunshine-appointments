@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
+import HeaderB from "@/components/HeaderB";
 import HeroSection from "@/components/HeroSection";
 import FeaturedIn from "@/components/FeaturedIn";
 import StickyCTA from "@/components/StickyCTA";
@@ -22,7 +23,10 @@ const Index = () => {
 
   return (
     <div className="pb-16 md:pb-0">
-      <Header onOpenForm={openForm} />
+      {/* Variant A */}
+      {/* <Header onOpenForm={openForm} /> */}
+      {/* Variant B */}
+      <HeaderB onOpenForm={openForm} />
       <StickyCTA onOpenForm={openForm} />
       <HeroSection onOpenForm={openForm} />
       <Testimonials />
