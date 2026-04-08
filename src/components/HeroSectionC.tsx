@@ -36,13 +36,12 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
                 </div>
 
                 <h1 className="font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-                  Cut Your Energy Costs
+                  Why Are You Still
                   <br />
-                  by up to{" "}
                   <span className="relative inline-block text-primary">
-                    70%
-                    <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 100 8" preserveAspectRatio="none">
-                      <path d="M0 7 Q25 0 50 4 Q75 8 100 2" stroke="hsl(var(--solar-gold))" strokeWidth="3" fill="none" strokeLinecap="round" />
+                    Renting Your Energy?
+                    <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 200 8" preserveAspectRatio="none">
+                      <path d="M0 7 Q50 0 100 4 Q150 8 200 2" stroke="hsl(var(--solar-gold))" strokeWidth="3" fill="none" strokeLinecap="round" />
                     </svg>
                   </span>
                 </h1>
