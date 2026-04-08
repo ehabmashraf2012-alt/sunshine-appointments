@@ -39,13 +39,13 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
           </div>
 
           <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Cut Your Energy Costs
+            Why Are You Still
             <br />
-            <span className="text-primary">by up to 70%</span>
+            <span className="text-primary">Renting Your Energy?</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-            Fed up of rising costs? It's time to take control with the UK's leading solar installer.
+            Every month, it's another direct debit and another increase you didn't agree to.
           </p>
         </motion.div>
 
