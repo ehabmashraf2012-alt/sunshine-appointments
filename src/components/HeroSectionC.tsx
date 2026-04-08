@@ -62,7 +62,7 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
                   size="lg"
                   className="group h-14 rounded-xl px-10 text-lg font-bold shadow-lg shadow-primary/25 transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/30"
                 >
-                  Request Your Invitation
+                  Request Your Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                 </Button>
                 <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
