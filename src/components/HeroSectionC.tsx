@@ -47,7 +47,7 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
                 </h1>
 
                 <p className="mx-auto mt-5 max-w-md text-base text-muted-foreground md:text-lg lg:mx-0">
-                  Fed up of rising costs? It's time to take control with the UK's leading solar installer.
+                  Every month, it's another direct debit and another increase you didn't agree to.
                 </p>
               </motion.div>
 
