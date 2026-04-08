@@ -27,7 +27,7 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
               >
                 <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-destructive/20 bg-destructive/5 px-3.5 py-1.5 text-xs font-bold text-destructive">
                   <Flame className="h-3.5 w-3.5" />
-                  Limited Slots This Month — Seats Filling Fast
+                  Limited Availability — Solar Demand Is Surging!
                 </div>
                 <br />
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
@@ -62,12 +62,12 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
                   size="lg"
                   className="group h-14 rounded-xl px-10 text-lg font-bold shadow-lg shadow-primary/25 transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/30"
                 >
-                  Request Your Free Consultation
+                  Request Your Consultation
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                 </Button>
                 <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                   <Clock className="h-3 w-3" />
-                  This month only · Seats filling fast · Takes 2 minutes
+                  Limited Availability · Book In 60 Secs · Quick call back
                 </span>
               </motion.div>
 
@@ -98,10 +98,10 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
             >
               <div className="rounded-2xl border border-border bg-card p-6 shadow-xl shadow-foreground/5">
                 <div className="mb-1 text-xs font-bold uppercase tracking-wider text-primary">
-                  Your Invitation Includes
+                  Your Consultation Includes
                 </div>
                 <div className="mb-5 text-sm text-muted-foreground">
-                  Everything covered in one free consultation:
+                  Advice from one of our solar experts:
                 </div>
 
                 <div className="space-y-4">
