@@ -40,7 +40,7 @@ const HeroSectionC = ({ onOpenForm }: HeroSectionCProps) => {
                   <br />
                   <span className="relative inline-block text-primary">
                     Renting Your Energy?
-                    <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 200 8" preserveAspectRatio="none">
+                    <svg className="absolute -bottom-3 left-0 w-full" viewBox="0 0 200 8" preserveAspectRatio="none">
                       <path d="M0 7 Q50 0 100 4 Q150 8 200 2" stroke="hsl(var(--solar-gold))" strokeWidth="3" fill="none" strokeLinecap="round" />
                     </svg>
                   </span>
